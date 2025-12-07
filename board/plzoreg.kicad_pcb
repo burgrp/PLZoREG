@@ -185,7 +185,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C3"
-			(at 0 -1.68 90)
+			(at 0.75 -5 90)
 			(layer "F.SilkS")
 			(uuid "9439d344-b6f8-4893-8709-cf4cc4b1972a")
 			(effects
@@ -384,7 +384,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R15"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "4d9f14b4-a968-43f8-bc7c-b31b0d5df41d")
 			(effects
@@ -690,6 +690,7 @@
 		(property "Reference" "J2"
 			(at 0 -5 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "3c453e5f-9fb8-4d17-a4b5-478fcd8257cc")
 			(effects
 				(font
@@ -831,7 +832,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C6"
-			(at 0 -1.68 90)
+			(at 2.75 1.25 90)
 			(layer "F.SilkS")
 			(uuid "23ad5e85-ee5a-4d0d-8000-a31eb402f939")
 			(effects
@@ -1642,7 +1643,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R11"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "d665d1e1-c517-479e-82c0-c366cf45b0b0")
 			(effects
@@ -2040,7 +2041,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R12"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "06eafcf0-7c42-4760-943f-fda2e711a745")
 			(effects
@@ -2441,6 +2442,7 @@
 		(property "Reference" "G3"
 			(at 7.62 -2.42 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0eef6a6b-7d48-487c-8cb6-e5d616db1fef")
 			(effects
 				(font
@@ -3046,7 +3048,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R20"
-			(at 0 -1.65 0)
+			(at 3.5375 0 0)
 			(layer "F.SilkS")
 			(uuid "c469aa67-7bb4-408f-8c4b-e4aabde1a389")
 			(effects
@@ -3346,7 +3348,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "2184cd15-a3ea-4331-8db3-933836bdc92d")
 		)
 		(pad "1" thru_hole circle
 			(at -2.280419 2.280419)
@@ -3355,7 +3357,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "2b333d10-92e6-47c2-acb9-ded624140795")
 		)
 		(pad "1" thru_hole circle
 			(at 0 -3.225)
@@ -3364,7 +3366,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "4fdbf284-a7b1-4de3-9143-a2c787d1c0cd")
 		)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -3373,7 +3375,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "09a72607-8642-492f-9ae8-d6d9be1d3819")
 		)
 		(pad "1" thru_hole circle
 			(at 0 3.225)
@@ -3382,7 +3384,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "f0f2d46c-0340-4e19-812a-8c13809501d3")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 -2.280419)
@@ -3391,7 +3393,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "acace2ac-3077-484a-bf3e-3129d78b5069")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 2.280419)
@@ -3400,7 +3402,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "5fb91591-2aa1-495c-b438-8e4af266947d")
 		)
 		(pad "1" thru_hole circle
 			(at 3.225 0)
@@ -3409,7 +3411,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "142a0838-41fc-4b80-8425-28dc9e0dfca7")
+			(uuid "49827d7e-1ef8-4928-8472-44a5cd6098dd")
 		)
 		(embedded_fonts no)
 	)
@@ -3420,7 +3422,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C2"
-			(at 0 -1.68 0)
+			(at 0 1.75 0)
 			(layer "F.SilkS")
 			(uuid "dbf18dbb-852e-4463-ac59-3ab077201f32")
 			(effects
@@ -4102,7 +4104,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R9"
-			(at 0 -1.65 0)
+			(at 0 1.5 0)
 			(layer "F.SilkS")
 			(uuid "9480ccba-aeb9-4e81-a6c0-5f8188a6aeda")
 			(effects
@@ -4301,7 +4303,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C4"
-			(at 0 -1.68 90)
+			(at 2.75 1 90)
 			(layer "F.SilkS")
 			(uuid "93946cb9-38f5-4237-bc30-76fd2c3a6502")
 			(effects
@@ -4706,6 +4708,7 @@
 		(property "Reference" "G1"
 			(at 7.62 -2.42 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ad04e339-8221-4e00-b5b7-5d553859807f")
 			(effects
 				(font
@@ -5259,7 +5262,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C13"
-			(at 0 -1.68 90)
+			(at 0 1.5 90)
 			(layer "F.SilkS")
 			(uuid "96a03323-3cc8-49ca-8c86-d8e96d0ff475")
 			(effects
@@ -6467,7 +6470,7 @@
 			)
 		)
 		(property "Value" "TRIAC"
-			(at 0 2.05 0)
+			(at 3.75 0 0)
 			(layer "F.SilkS")
 			(uuid "8632e89d-3d43-4dc2-abc6-93bd4a6a8463")
 			(effects
@@ -6561,7 +6564,7 @@
 		(descr "6-lead though-hole mounted DIP package, row spacing 8.89mm (350 mils), SMDSocket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 8.89mm 350mil SMDSocket LongPads")
 		(property "Reference" "U3"
-			(at 0 -4.87 90)
+			(at -4.5 -5 90)
 			(layer "F.SilkS")
 			(uuid "b9f65311-9caf-4271-acec-2d687095bdf5")
 			(effects
@@ -6842,7 +6845,7 @@
 		(descr "6-lead though-hole mounted DIP package, row spacing 8.89mm (350 mils), SMDSocket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 8.89mm 350mil SMDSocket LongPads")
 		(property "Reference" "U2"
-			(at 0 -4.87 90)
+			(at -4.25 -5 90)
 			(layer "F.SilkS")
 			(uuid "acae0188-62b6-4390-ada9-0c9a98935ca9")
 			(effects
@@ -7122,7 +7125,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R19"
-			(at 0 -1.65 0)
+			(at -3.5375 0 0)
 			(layer "F.SilkS")
 			(uuid "a1267ad9-7d9a-4e9d-a6b6-b0ed514f6bea")
 			(effects
@@ -7528,7 +7531,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "a1065609-d27c-4ec4-bde4-a67b1de980f5")
 		)
 		(pad "1" thru_hole circle
 			(at -2.280419 2.280419)
@@ -7537,7 +7540,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "28058dc3-e9ac-4e02-98d4-248039fe40e4")
 		)
 		(pad "1" thru_hole circle
 			(at 0 -3.225)
@@ -7546,7 +7549,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "b0b9b36d-e13e-441c-9a11-7c362df7418b")
 		)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -7555,7 +7558,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "5c0464dc-501f-4b9e-8f7c-3b0bb54bdf3a")
 		)
 		(pad "1" thru_hole circle
 			(at 0 3.225)
@@ -7564,7 +7567,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "53a37e44-edeb-498a-9df9-c202ed2bf517")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 -2.280419)
@@ -7573,7 +7576,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "9c2d036a-e102-47cc-980a-2ea9ead0f1e7")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 2.280419)
@@ -7582,7 +7585,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "90587194-9b28-4249-9aa4-7b8115fa7573")
 		)
 		(pad "1" thru_hole circle
 			(at 3.225 0)
@@ -7591,7 +7594,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "bc6ee565-22d5-4719-894d-a6081b1c66b2")
+			(uuid "f773608a-0dbd-4f57-920e-344de7d93c37")
 		)
 		(embedded_fonts no)
 	)
@@ -7950,7 +7953,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C7"
-			(at 0 -1.68 90)
+			(at 0.75 -7 90)
 			(layer "F.SilkS")
 			(uuid "720ab00f-44b4-4d3d-88b1-346b47647949")
 			(effects
@@ -8149,7 +8152,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R18"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "e7c8b9b9-b217-4370-a799-a608f71932e6")
 			(effects
@@ -8348,7 +8351,8 @@
 		(property "Reference" "X1"
 			(at 0 2.54 90)
 			(layer "F.SilkS")
-			(uuid "b5cbb8cc-d385-46aa-b0b4-5e545aba7980")
+			(hide yes)
+			(uuid "aba44896-aea2-44f7-a30c-56f7e3be8d78")
 			(effects
 				(font
 					(size 1 1)
@@ -8357,9 +8361,9 @@
 			)
 		)
 		(property "Value" "SWD"
-			(at 0 -2.54 90)
-			(layer "F.Fab")
-			(uuid "29194713-c31c-4839-b91c-663fe5847bf0")
+			(at 0 2.25 90)
+			(layer "F.SilkS")
+			(uuid "484de86d-6af9-4791-8513-b86ae59cce6b")
 			(effects
 				(font
 					(size 1 1)
@@ -8371,7 +8375,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "bc04a055-8626-4585-8d00-fd8687dc3bc3")
+			(uuid "9f355787-fec1-45c3-b689-d296f41ecf5f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8383,7 +8387,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0fc2c655-2a2b-4208-b5c2-daa194c565bd")
+			(uuid "7c0aae17-d224-466b-8647-4ff2cfd2442e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8489,7 +8493,8 @@
 		(property "Reference" "J3"
 			(at 0 -3.15 0)
 			(layer "F.SilkS")
-			(uuid "297139ad-4ba2-4b72-9b85-49a124865dd5")
+			(hide yes)
+			(uuid "e67d2a75-9bdd-4979-ba41-b8c8fcb73cc0")
 			(effects
 				(font
 					(size 1 1)
@@ -8497,10 +8502,10 @@
 				)
 			)
 		)
-		(property "Value" "Heatsink Earth"
-			(at 0 3.15 0)
-			(layer "F.Fab")
-			(uuid "a8c454d6-56f6-4029-af8d-d9dc187c82d9")
+		(property "Value" "Heatsink PE"
+			(at 0 -3.25 0)
+			(layer "F.SilkS")
+			(uuid "05c4eaf2-2db7-44a7-8293-77f2220cb8bc")
 			(effects
 				(font
 					(size 1 1)
@@ -8512,7 +8517,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5d82c7a9-a181-4819-b37f-42cb87cf2bd7")
+			(uuid "159df4a6-339e-4034-9da8-814e34f572e3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8524,7 +8529,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ddd8ae9d-723b-484b-8052-f0c07bca80dd")
+			(uuid "f67dc941-500e-4d0c-a93f-b9cdb20b6551")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8732,7 +8737,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "ff182ea6-5478-45ca-8ef2-70e24b34f006")
 		)
 		(pad "1" thru_hole circle
 			(at -2.280419 2.280419)
@@ -8741,7 +8746,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "e3eb01e2-80ff-4668-92e3-9f90d219eebb")
 		)
 		(pad "1" thru_hole circle
 			(at 0 -3.225)
@@ -8750,7 +8755,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "3926d522-5221-41bc-b814-b87f498d7b71")
 		)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -8759,7 +8764,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "c491a076-d19d-4dd9-bfa9-9e49ee6f1949")
 		)
 		(pad "1" thru_hole circle
 			(at 0 3.225)
@@ -8768,7 +8773,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "a0fdc4a7-c8bd-4a6d-a113-0d79af6d558a")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 -2.280419)
@@ -8777,7 +8782,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "50899b53-758c-4b39-bac6-a3d26ffc9419")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 2.280419)
@@ -8786,7 +8791,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "aefc87ba-d009-4e18-abf7-d564df029980")
 		)
 		(pad "1" thru_hole circle
 			(at 3.225 0)
@@ -8795,7 +8800,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "c3e0402d-280f-4003-bf3f-8d9585b82629")
+			(uuid "4dbdfd6d-99e3-4bfc-b75a-6d8970dbac1d")
 		)
 		(embedded_fonts no)
 	)
@@ -8806,7 +8811,7 @@
 		(descr "Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=12.7mm, 1W, length*diameter=9.9*3.6mm^2")
 		(tags "Resistor Axial_DIN0411 series Axial Horizontal pin pitch 12.7mm 1W length 9.9mm diameter 3.6mm")
 		(property "Reference" "R3"
-			(at 6.35 -2.92 90)
+			(at 6.6 3 90)
 			(layer "F.SilkS")
 			(uuid "e9d4f8fa-5e45-4dbc-aadc-6d6645c99461")
 			(effects
@@ -9021,7 +9026,7 @@
 			)
 		)
 		(property "Value" "TSENSE"
-			(at 1 -2.5 0)
+			(at 4.75 0 0)
 			(layer "F.SilkS")
 			(uuid "16c8ec02-abcb-4186-b9ea-e02947ca247a")
 			(effects
@@ -9517,7 +9522,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C5"
-			(at 0 -1.68 90)
+			(at 0.75 -6 90)
 			(layer "F.SilkS")
 			(uuid "951ff64d-aadf-4cd2-ac97-93afc45d7455")
 			(effects
@@ -9822,7 +9827,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C14"
-			(at 0 -1.68 0)
+			(at -4.4625 0 0)
 			(layer "F.SilkS")
 			(uuid "68e137d0-f0c7-4247-8614-a84ae7bf3917")
 			(effects
@@ -10021,7 +10026,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R13"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "a72664ba-dc70-45bd-98cc-7311e52fafaf")
 			(effects
@@ -10221,6 +10226,7 @@
 		(property "Reference" "J1"
 			(at 0 -5 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a7328d49-6e45-4f54-bf2e-a0a820a274e6")
 			(effects
 				(font
@@ -10463,7 +10469,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "75e6ae90-dff9-4375-9375-3ba6cfb213db")
 		)
 		(pad "1" thru_hole circle
 			(at -2.280419 2.280419)
@@ -10472,7 +10478,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "8591142b-1d9a-4840-8b10-895c9d1794d6")
 		)
 		(pad "1" thru_hole circle
 			(at 0 -3.225)
@@ -10481,7 +10487,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "06c55695-4231-4803-a5b0-0348cf984b55")
 		)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -10490,7 +10496,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "cd6c67c3-65ed-4346-9876-adf788fa55ff")
 		)
 		(pad "1" thru_hole circle
 			(at 0 3.225)
@@ -10499,7 +10505,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "53920943-aa59-42a0-a63b-42b1b72a911d")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 -2.280419)
@@ -10508,7 +10514,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "57a54e79-7164-40a2-ae79-f9b156c28031")
 		)
 		(pad "1" thru_hole circle
 			(at 2.280419 2.280419)
@@ -10517,7 +10523,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "ea75ca84-fb65-4ba5-9307-5ee86c77d6e3")
 		)
 		(pad "1" thru_hole circle
 			(at 3.225 0)
@@ -10526,7 +10532,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(zone_connect 2)
-			(uuid "6afa8a2e-1afa-4454-92f3-831cc1d73fc8")
+			(uuid "42a22fd7-d110-4896-a38f-0242e0ba5168")
 		)
 		(embedded_fonts no)
 	)
@@ -10537,7 +10543,7 @@
 		(descr "Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=12.7mm, 1W, length*diameter=9.9*3.6mm^2")
 		(tags "Resistor Axial_DIN0411 series Axial Horizontal pin pitch 12.7mm 1W length 9.9mm diameter 3.6mm")
 		(property "Reference" "R4"
-			(at 6.35 -2.92 0)
+			(at 6.35 2.75 0)
 			(layer "F.SilkS")
 			(uuid "e450ced1-3ffb-463d-a9b9-a55cd1b43f79")
 			(effects
@@ -10740,7 +10746,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R16"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "2d35d6f0-5362-492b-81e5-0069b111e39e")
 			(effects
@@ -10939,7 +10945,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C9"
-			(at 0 -1.68 90)
+			(at 0 1.75 90)
 			(layer "F.SilkS")
 			(uuid "6e0824d3-e308-4efb-b660-685441a511ff")
 			(effects
@@ -11138,7 +11144,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R17"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "a339292e-9074-434b-bf15-0a23e1410598")
 			(effects
@@ -11340,6 +11346,7 @@
 		(property "Reference" "G2"
 			(at 7.62 -2.42 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "abe88f67-6ca4-4ec4-8f2b-6ac19f2d200d")
 			(effects
 				(font
@@ -11945,7 +11952,7 @@
 		(descr "C, Rect series, Radial, pin pitch=15.00mm, length*width=18*6mm^2, Capacitor, http://www.wima.com/EN/WIMA_FKS_3.pdf")
 		(tags "C Rect series Radial pin pitch 15.00mm length 18mm width 6mm Capacitor")
 		(property "Reference" "C1"
-			(at 7.5 -4.25 0)
+			(at 7.5 4 0)
 			(layer "F.SilkS")
 			(uuid "e11f133c-c7b3-4d02-b3ae-448966011bbf")
 			(effects
@@ -12307,7 +12314,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R14"
-			(at 0 -1.65 0)
+			(at 3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "4de22dc9-ca16-405f-a3c1-bef0ca50cc37")
 			(effects
@@ -13552,6 +13559,151 @@
 		)
 	)
 	(gr_line
+		(start 77.2 78.05)
+		(end 88.95 78.05)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "04ecbb78-1f0b-43d9-92b7-17d3626ebb7d")
+	)
+	(gr_line
+		(start 95.6 140.8)
+		(end 95.6 150.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "3ec34c8d-2a0c-4b98-a048-443601069009")
+	)
+	(gr_line
+		(start 126.7 140.8)
+		(end 126.7 150.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "507eb3a1-78e5-48bf-94fa-16ea06c291de")
+	)
+	(gr_line
+		(start 95.6 145.8)
+		(end 125.7 145.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "59b0808c-8a9b-4a40-96f1-e3d63d134c71")
+	)
+	(gr_poly
+		(pts
+			(xy 167.733368 104.925718) (xy 166.392246 106.416014) (xy 167.584123 106.416014) (xy 165.2 108.8)
+			(xy 166.094288 106.863101) (xy 165.051286 106.863101) (xy 166.24314 104.925717) (xy 167.733368 104.925717)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "7b4af054-6fa3-4c37-8050-1c16a5a1897f")
+	)
+	(gr_line
+		(start 126.7 145.8)
+		(end 156.8 145.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8f89e0b6-062a-4cb8-add8-e8bd2ebcb33d")
+	)
+	(gr_line
+		(start 116.2 57.8)
+		(end 136.2 57.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9d864977-6a1d-479d-a2a5-26305c2296b7")
+	)
+	(gr_line
+		(start 156.8 140.8)
+		(end 156.8 150.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c12eb3b1-b9bb-4048-b6f6-9aa0f75f746b")
+	)
+	(gr_line
+		(start 125.7 140.8)
+		(end 125.7 150.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d1487474-a3e3-4fea-8cba-6bb4af808472")
+	)
+	(gr_poly
+		(pts
+			(xy 166.640337 100.908193) (xy 166.656595 100.909005) (xy 166.672753 100.910351) (xy 166.688799 100.912224)
+			(xy 166.704723 100.914618) (xy 166.720514 100.917526) (xy 166.73616 100.920942) (xy 166.751651 100.92486)
+			(xy 166.766974 100.929272) (xy 166.78212 100.934174) (xy 166.797076 100.939557) (xy 166.811832 100.945417)
+			(xy 166.826377 100.951745) (xy 166.840699 100.958537) (xy 166.854787 100.965785) (xy 166.86863 100.973483)
+			(xy 166.882217 100.981625) (xy 166.895537 100.990205) (xy 166.908579 100.999215) (xy 166.921331 101.008649)
+			(xy 166.933783 101.018502) (xy 166.945923 101.028766) (xy 166.95774 101.039435) (xy 166.969222 101.050502)
+			(xy 166.98036 101.061962) (xy 166.991141 101.073808) (xy 167.001555 101.086033) (xy 167.01159 101.098632)
+			(xy 167.021235 101.111597) (xy 167.03048 101.124921) (xy 167.039312 101.1386) (xy 167.047721 101.152626)
+			(xy 171.824978 109.426664) (xy 171.835553 109.441954) (xy 171.845556 109.457655) (xy 171.854971 109.473753)
+			(xy 171.863785 109.490233) (xy 171.87198 109.507081) (xy 171.879543 109.524281) (xy 171.886458 109.54182)
+			(xy 171.89271 109.559682) (xy 171.898283 109.577853) (xy 171.903163 109.596319) (xy 171.907333 109.615064)
+			(xy 171.91078 109.634074) (xy 171.913487 109.653334) (xy 171.915439 109.67283) (xy 171.916622 109.692547)
+			(xy 171.917019 109.71247) (xy 171.916383 109.737664) (xy 171.914493 109.762526) (xy 171.911382 109.787026)
+			(xy 171.907079 109.811133) (xy 171.901616 109.834817) (xy 171.895023 109.858046) (xy 171.887331 109.880789)
+			(xy 171.87857 109.903017) (xy 171.868772 109.924698) (xy 171.857966 109.945803) (xy 171.846184 109.966299)
+			(xy 171.833456 109.986156) (xy 171.819814 110.005344) (xy 171.805287 110.023832) (xy 171.789907 110.041589)
+			(xy 171.773704 110.058585) (xy 171.756709 110.074789) (xy 171.738952 110.09017) (xy 171.720465 110.104697)
+			(xy 171.701277 110.11834) (xy 171.681421 110.131068) (xy 171.660926 110.14285) (xy 171.639823 110.153656)
+			(xy 171.618142 110.163454) (xy 171.595916 110.172215) (xy 171.573173 110.179908) (xy 171.549946 110.186501)
+			(xy 171.526264 110.191964) (xy 171.502159 110.196267) (xy 171.477661 110.199378) (xy 171.4528 110.201267)
+			(xy 171.427608 110.201904) (xy 171.427474 110.201927) (xy 171.427331 110.201944) (xy 171.42718 110.201955)
+			(xy 171.427023 110.201963) (xy 171.426691 110.201965) (xy 171.42634 110.201956) (xy 171.42561 110.201923)
+			(xy 171.425243 110.20191) (xy 171.424882 110.201904) (xy 161.823099 110.201904) (xy 161.806752 110.201632)
+			(xy 161.790494 110.20082) (xy 161.774334 110.199474) (xy 161.758285 110.197601) (xy 161.742358 110.195207)
+			(xy 161.726563 110.192298) (xy 161.710913 110.188882) (xy 161.695418 110.184964) (xy 161.680089 110.180552)
+			(xy 161.664938 110.17565) (xy 161.649976 110.170266) (xy 161.635214 110.164407) (xy 161.620663 110.158078)
+			(xy 161.606335 110.151286) (xy 161.592241 110.144037) (xy 161.578391 110.136338) (xy 161.564797 110.128196)
+			(xy 161.55147 110.119616) (xy 161.538422 110.110605) (xy 161.525664 110.10117) (xy 161.513206 110.091316)
+			(xy 161.501061 110.081052) (xy 161.489239 110.070381) (xy 161.477751 110.059313) (xy 161.466608 110.047851)
+			(xy 161.455823 110.036004) (xy 161.445406 110.023777) (xy 161.435367 110.011178) (xy 161.42572 109.998211)
+			(xy 161.416473 109.984884) (xy 161.40764 109.971204) (xy 161.399231 109.957176) (xy 161.383868 109.928387)
+			(xy 161.370553 109.898878) (xy 161.359287 109.868752) (xy 161.350069 109.838113) (xy 161.3429 109.807062)
+			(xy 161.337779 109.775703) (xy 161.334706 109.744138) (xy 161.333682 109.71247) (xy 161.334706 109.680802)
+			(xy 161.337779 109.649237) (xy 161.3429 109.617878) (xy 161.350069 109.586827) (xy 161.359287 109.556188)
+			(xy 161.370553 109.526062) (xy 161.383868 109.496554) (xy 161.399231 109.467765) (xy 161.540516 109.223059)
+			(xy 162.670836 109.223059) (xy 162.670836 109.223198) (xy 170.577146 109.223198) (xy 166.623991 102.376154)
+			(xy 162.670836 109.223059) (xy 161.540516 109.223059) (xy 166.200122 101.152626) (xy 166.217365 101.124921)
+			(xy 166.236259 101.098632) (xy 166.256715 101.073808) (xy 166.278642 101.050502) (xy 166.301952 101.028766)
+			(xy 166.326556 101.008649) (xy 166.352362 100.990205) (xy 166.379282 100.973483) (xy 166.407227 100.958537)
+			(xy 166.436106 100.945417) (xy 166.46583 100.934174) (xy 166.49631 100.92486) (xy 166.527455 100.917526)
+			(xy 166.559177 100.912224) (xy 166.591385 100.909005) (xy 166.623991 100.90792)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "e69fe93d-252a-4669-898f-ac86e07032b7")
+	)
+	(gr_line
 		(start 171.2 150.8)
 		(end 81.2 150.8)
 		(stroke
@@ -13684,6 +13836,427 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "f9ac976d-0f8b-4eea-b0a8-dad42aec79f2")
+	)
+	(gr_text "DANGER"
+		(at 166.62535 99.554942 0)
+		(layer "F.SilkS")
+		(uuid "150f2dd5-f818-41fa-b21b-488fcb3d3296")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "L"
+		(at 151.2 144.8 0)
+		(layer "F.SilkS")
+		(uuid "1f955646-4fce-483f-b023-235a5838c289")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "L"
+		(at 101.2 144.8 0)
+		(layer "F.SilkS")
+		(uuid "21945bc0-512e-46c4-a863-48aee6ed532f")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "v1.0"
+		(at 138.2 56.8 0)
+		(layer "F.SilkS")
+		(uuid "281d9121-8850-4678-9eec-bf0375218b16")
+		(effects
+			(font
+				(face "Nunito Sans 10pt")
+				(size 1 1)
+				(thickness 0.125)
+			)
+			(justify bottom)
+		)
+		(render_cache "v1.0" 0
+			(polygon
+				(pts
+					(xy 137.133635 56.63) (xy 136.842437 55.943982) (xy 136.969809 55.943982) (xy 137.203611 56.526379)
+					(xy 137.182606 56.526379) (xy 137.419216 55.943982) (xy 137.541032 55.943982) (xy 137.248429 56.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 137.712735 56.63) (xy 137.712735 56.527784) (xy 137.960519 56.527784) (xy 137.960519 55.742421)
+					(xy 138.023534 55.746573) (xy 137.761767 55.914612) (xy 137.708522 55.823571) (xy 137.99276 55.643014)
+					(xy 138.079527 55.643014) (xy 138.079527 56.527784) (xy 138.309176 56.527784) (xy 138.309176 56.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 138.494556 56.63) (xy 138.494556 56.481622) (xy 138.647147 56.481622) (xy 138.647147 56.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 139.235368 55.6372) (xy 139.298556 55.656587) (xy 139.352521 55.687833) (xy 139.398292 55.730538)
+					(xy 139.437085 55.786193) (xy 139.46878 55.857215) (xy 139.489555 55.932889) (xy 139.503095 56.024374)
+					(xy 139.507981 56.13437) (xy 139.503113 56.244381) (xy 139.489589 56.336399) (xy 139.46878 56.41299)
+					(xy 139.436997 56.484917) (xy 139.397977 56.541269) (xy 139.351849 56.584509) (xy 139.297444 56.616182)
+					(xy 139.234435 56.635729) (xy 139.160729 56.642578) (xy 139.087063 56.635731) (xy 139.024051 56.616187)
+					(xy 138.969609 56.584509) (xy 138.923475 56.5413) (xy 138.88448 56.48517) (xy 138.852739 56.413722)
+					(xy 138.831946 56.33757) (xy 138.818414 56.245798) (xy 138.813538 56.135774) (xy 138.932545 56.135774)
+					(xy 138.93696 56.242928) (xy 138.948855 56.32676) (xy 138.966484 56.391361) (xy 138.988538 56.440345)
+					(xy 139.020772 56.484008) (xy 139.059298 56.514188) (xy 139.105225 56.532563) (xy 139.160729 56.539019)
+					(xy 139.216233 56.532563) (xy 139.262159 56.514188) (xy 139.300685 56.484008) (xy 139.33292 56.440345)
+					(xy 139.354969 56.391373) (xy 139.37262 56.326593) (xy 139.384544 56.242318) (xy 139.388974 56.13437)
+					(xy 139.384571 56.026272) (xy 139.372755 55.942432) (xy 139.355331 55.878488) (xy 139.333653 55.830593)
+					(xy 139.301855 55.788081) (xy 139.263414 55.758511) (xy 139.217129 55.740391) (xy 139.160729 55.733995)
+					(xy 139.10513 55.740386) (xy 139.059176 55.758557) (xy 139.02069 55.788341) (xy 138.988538 55.831325)
+					(xy 138.96656 55.879586) (xy 138.948928 55.943801) (xy 138.936989 56.027763) (xy 138.932545 56.135774)
+					(xy 138.813538 56.135774) (xy 138.818415 56.025791) (xy 138.831947 55.93406) (xy 138.852739 55.857948)
+					(xy 138.884514 55.786493) (xy 138.923511 55.73061) (xy 138.969609 55.687833) (xy 139.02401 55.656506)
+					(xy 139.087024 55.637157) (xy 139.160729 55.630375)
+				)
+			)
+		)
+	)
+	(gr_text "INPUT"
+		(at 111.2 149.8 0)
+		(layer "F.SilkS")
+		(uuid "2c39a1e1-f68a-47e2-8edb-929d47dab889")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "PLZoREG"
+		(at 126.2 57.3 0)
+		(layer "F.SilkS")
+		(uuid "5bf69ccb-392d-48a2-8032-1ba5ddba19a9")
+		(effects
+			(font
+				(face "Nunito Sans 10pt Black")
+				(size 3 3)
+				(thickness 0.125)
+			)
+			(justify bottom)
+		)
+		(render_cache "PLZoREG" 0
+			(polygon
+				(pts
+					(xy 118.320513 53.843277) (xy 118.509178 53.883397) (xy 118.670115 53.946646) (xy 118.816268 54.037142)
+					(xy 118.935749 54.147953) (xy 119.03135 54.280587) (xy 119.09972 54.42952) (xy 119.142395 54.600871)
+					(xy 119.157379 54.799176) (xy 119.142475 54.997504) (xy 119.099864 55.170425) (xy 119.03135 55.322161)
+					(xy 118.935454 55.457328) (xy 118.815249 55.570185) (xy 118.667917 55.66233) (xy 118.505596 55.726886)
+					(xy 118.31752 55.767584) (xy 118.098953 55.781948) (xy 117.431071 55.781948) (xy 117.431071 56.79)
+					(xy 116.645769 56.79) (xy 116.645769 55.177264) (xy 117.431071 55.177264) (xy 117.960284 55.177264)
+					(xy 118.100507 55.165486) (xy 118.207257 55.133633) (xy 118.287997 55.08494) (xy 118.349274 55.015775)
+					(xy 118.387526 54.925561) (xy 118.401387 54.807602) (xy 118.387617 54.686617) (xy 118.349888 54.595228)
+					(xy 118.290012 54.526235) (xy 118.210548 54.477678) (xy 118.103396 54.445657) (xy 117.960284 54.433728)
+					(xy 117.431071 54.433728) (xy 117.431071 55.177264) (xy 116.645769 55.177264) (xy 116.645769 53.829043)
+					(xy 118.098953 53.829043)
+				)
+			)
+			(polygon
+				(pts
+					(xy 119.588407 56.79) (xy 119.588407 53.829043) (xy 120.373709 53.829043) (xy 120.373709 56.134757)
+					(xy 121.696833 56.134757) (xy 121.696833 56.79)
+				)
+			)
+			(polygon
+				(pts
+					(xy 122.038285 56.79) (xy 122.038285 56.223051) (xy 123.604859 54.240654) (xy 123.630138 54.480073)
+					(xy 122.038285 54.480073) (xy 122.038285 53.829043) (xy 124.352608 53.829043) (xy 124.352608 54.391779)
+					(xy 122.781821 56.378389) (xy 122.756542 56.13897) (xy 124.411409 56.13897) (xy 124.411409 56.79)
+				)
+			)
+			(polygon
+				(pts
+					(xy 126.007426 54.667963) (xy 126.210301 54.712787) (xy 126.388494 54.784521) (xy 126.550314 54.886084)
+					(xy 126.684551 55.011473) (xy 126.793876 55.162609) (xy 126.872774 55.331873) (xy 126.921693 55.524168)
+					(xy 126.938773 55.744213) (xy 126.921805 55.961441) (xy 126.872985 56.15319) (xy 126.793876 56.323801)
+					(xy 126.684424 56.4762) (xy 126.550171 56.602224) (xy 126.388494 56.703904) (xy 126.210301 56.775639)
+					(xy 126.007426 56.820462) (xy 125.775384 56.836161) (xy 125.543216 56.820493) (xy 125.339565 56.775695)
+					(xy 125.160075 56.703904) (xy 124.997247 56.60203) (xy 124.863066 56.475991) (xy 124.754693 56.323801)
+					(xy 124.676725 56.153308) (xy 124.628561 55.961549) (xy 124.611811 55.744213) (xy 125.372017 55.744213)
+					(xy 125.386164 55.914763) (xy 125.424011 56.041544) (xy 125.481193 56.134757) (xy 125.561825 56.206687)
+					(xy 125.658236 56.249891) (xy 125.775384 56.265) (xy 125.892403 56.249892) (xy 125.988691 56.206691)
+					(xy 126.069208 56.134757) (xy 126.126492 56.041528) (xy 126.1644 55.914746) (xy 126.178568 55.744213)
+					(xy 126.164265 55.570634) (xy 126.126248 55.443419) (xy 126.069208 55.35147) (xy 125.988857 55.280857)
+					(xy 125.892569 55.238324) (xy 125.775384 55.223426) (xy 125.65807 55.238325) (xy 125.561659 55.28086)
+					(xy 125.481193 55.35147) (xy 125.424256 55.443403) (xy 125.386298 55.570617) (xy 125.372017 55.744213)
+					(xy 124.611811 55.744213) (xy 124.628891 55.524168) (xy 124.67781 55.331873) (xy 124.756708 55.162609)
+					(xy 124.866131 55.011454) (xy 125.000375 54.886067) (xy 125.16209 54.784521) (xy 125.340285 54.712792)
+					(xy 125.543217 54.667966) (xy 125.775384 54.652264)
+				)
+			)
+			(polygon
+				(pts
+					(xy 129.088326 53.846618) (xy 129.302238 53.895448) (xy 129.477909 53.971373) (xy 129.621842 54.072676)
+					(xy 129.740933 54.203359) (xy 129.826729 54.356949) (xy 129.880265 54.538014) (xy 129.89918 54.753014)
+					(xy 129.885949 54.926391) (xy 129.848249 55.076249) (xy 129.787805 55.206573) (xy 129.703993 55.323081)
+					(xy 129.600407 55.421395) (xy 129.47493 55.502779) (xy 129.336784 55.562479) (xy 129.196717 55.599405)
+					(xy 129.300077 55.619408) (xy 129.420342 55.681198) (xy 129.522799 55.777632) (xy 129.617812 55.92483)
+					(xy 130.088224 56.79) (xy 129.227085 56.79) (xy 128.73579 55.878668) (xy 128.697948 55.821221)
+					(xy 128.655923 55.779933) (xy 128.552974 55.727543) (xy 128.420717 55.71069) (xy 128.172871 55.71069)
+					(xy 128.172871 56.79) (xy 127.38757 56.79) (xy 127.38757 55.143558) (xy 128.172871 55.143558) (xy 128.702085 55.143558)
+					(xy 128.845578 55.132129) (xy 128.952712 55.101544) (xy 129.031812 55.055448) (xy 129.091952 54.989073)
+					(xy 129.129534 54.901695) (xy 129.143187 54.786536) (xy 129.129641 54.674232) (xy 129.092159 54.58818)
+					(xy 129.031812 54.522021) (xy 128.952697 54.475823) (xy 128.845562 54.445178) (xy 128.702085 54.433728)
+					(xy 128.172871 54.433728) (xy 128.172871 55.143558) (xy 127.38757 55.143558) (xy 127.38757 53.829043)
+					(xy 128.828114 53.829043)
+				)
+			)
+			(polygon
+				(pts
+					(xy 130.447444 56.79) (xy 130.447444 53.829043) (xy 132.57254 53.829043) (xy 132.57254 54.442154)
+					(xy 131.199223 54.442154) (xy 131.199223 54.984007) (xy 132.480216 54.984007) (xy 132.480216 55.593087)
+					(xy 131.199223 55.593087) (xy 131.199223 56.176889) (xy 132.57254 56.176889) (xy 132.57254 56.79)
+				)
+			)
+			(polygon
+				(pts
+					(xy 134.634438 56.836161) (xy 134.383127 56.823246) (xy 134.159471 56.78625) (xy 133.960064 56.727203)
+					(xy 133.781908 56.647301) (xy 133.614149 56.542175) (xy 133.469097 56.419552) (xy 133.344788 56.278694)
+					(xy 133.240056 56.118087) (xy 133.15922 55.945424) (xy 133.100208 55.756456) (xy 133.063653 55.54886)
+					(xy 133.051012 55.319963) (xy 133.064169 55.082335) (xy 133.102082 54.868578) (xy 133.163052 54.675661)
+					(xy 133.246284 54.500956) (xy 133.354386 54.338578) (xy 133.48223 54.196825) (xy 133.631023 54.074125)
+					(xy 133.802791 53.969727) (xy 133.984934 53.890701) (xy 134.188511 53.832268) (xy 134.416478 53.795657)
+					(xy 134.672174 53.782882) (xy 134.88078 53.791868) (xy 135.083784 53.818602) (xy 135.280191 53.862796)
+					(xy 135.45546 53.921367) (xy 135.616208 53.996938) (xy 135.74324 54.080919) (xy 135.50382 54.685786)
+					(xy 135.302846 54.576782) (xy 135.106865 54.507367) (xy 134.903559 54.468181) (xy 134.684813 54.454794)
+					(xy 134.485812 54.47007) (xy 134.321178 54.512786) (xy 134.184671 54.579979) (xy 134.071519 54.671132)
+					(xy 133.982641 54.784843) (xy 133.91601 54.926536) (xy 133.872968 55.102318) (xy 133.857379 55.319963)
+					(xy 133.872529 55.533204) (xy 133.91455 55.707284) (xy 133.979887 55.849275) (xy 134.067306 55.964764)
+					(xy 134.178641 56.057117) (xy 134.315478 56.12556) (xy 134.483237 56.169364) (xy 134.689026 56.185132)
+					(xy 134.987247 56.162051) (xy 135.132963 56.132218) (xy 135.277041 56.088595) (xy 135.134342 56.382602)
+					(xy 135.134342 55.660132) (xy 134.546327 55.660132) (xy 134.546327 55.110036) (xy 135.776945 55.110036)
+					(xy 135.776945 56.609382) (xy 135.61628 56.674598) (xy 135.434578 56.731198) (xy 135.244969 56.775514)
+					(xy 135.044033 56.808867) (xy 134.83983 56.829335)
+				)
+			)
+		)
+	)
+	(gr_text "OUTPUT"
+		(at 142.2 149.8 0)
+		(layer "F.SilkS")
+		(uuid "6442ad79-4215-43c3-9014-383f749c29ec")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "PE"
+		(at 120.2 144.8 0)
+		(layer "F.SilkS")
+		(uuid "8abfdba1-b6aa-4b9a-b9cb-270d62be9b0b")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "PE"
+		(at 132.2 144.8 0)
+		(layer "F.SilkS")
+		(uuid "9de2a2a4-6579-4596-9bc4-df45f7083da3")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "HIGH\nVOLTAGE!"
+		(at 166.62535 117.554942 0)
+		(layer "F.SilkS")
+		(uuid "d771d2b4-c3f8-4993-8fda-f0f404d97389")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "N"
+		(at 110.7 144.8 0)
+		(layer "F.SilkS")
+		(uuid "f333f4a5-c65b-48af-939b-65e7721d187c")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "drake.cz"
+		(at 126.2 59.8 0)
+		(layer "F.SilkS")
+		(uuid "f363799c-6f04-4ebf-82fe-9c41623e140a")
+		(effects
+			(font
+				(face "Nunito Sans 10pt")
+				(size 1 1)
+				(thickness 0.125)
+			)
+			(justify bottom)
+		)
+		(render_cache "drake.cz" 0
+			(polygon
+				(pts
+					(xy 124.265718 59.63) (xy 124.153733 59.63) (xy 124.153733 59.485811) (xy 124.137727 59.52215)
+					(xy 124.107387 59.563091) (xy 124.067638 59.597088) (xy 124.021431 59.622013) (xy 123.969378 59.637281)
+					(xy 123.910101 59.642578) (xy 123.848857 59.637444) (xy 123.794675 59.622632) (xy 123.746275 59.598492)
+					(xy 123.703557 59.565396) (xy 123.66776 59.524216) (xy 123.638503 59.473928) (xy 123.617978 59.419028)
+					(xy 123.605176 59.357123) (xy 123.600706 59.287021) (xy 123.719714 59.287021) (xy 123.723845 59.348197)
+					(xy 123.735402 59.39924) (xy 123.753496 59.441851) (xy 123.777782 59.477409) (xy 123.809172 59.507282)
+					(xy 123.844995 59.528445) (xy 123.886136 59.541443) (xy 123.933915 59.54598) (xy 123.982447 59.541417)
+					(xy 124.024032 59.528378) (xy 124.060038 59.507208) (xy 124.09139 59.477409) (xy 124.115704 59.441847)
+					(xy 124.133817 59.399234) (xy 124.145384 59.348193) (xy 124.14952 59.287021) (xy 124.145354 59.225014)
+					(xy 124.133741 59.173643) (xy 124.115625 59.131095) (xy 124.09139 59.095901) (xy 124.060072 59.066354)
+					(xy 124.024286 59.045392) (xy 123.98314 59.032504) (xy 123.935319 59.028002) (xy 123.886744 59.032527)
+					(xy 123.845132 59.045455) (xy 123.809121 59.066423) (xy 123.777782 59.095901) (xy 123.753576 59.131091)
+					(xy 123.735477 59.173638) (xy 123.723875 59.22501) (xy 123.719714 59.287021) (xy 123.600706 59.287021)
+					(xy 123.605241 59.214968) (xy 123.618102 59.152686) (xy 123.638503 59.09871) (xy 123.667642 59.049235)
+					(xy 123.703215 59.008478) (xy 123.745603 58.97549) (xy 123.793539 58.951375) (xy 123.847462 58.936551)
+					(xy 123.908696 58.931404) (xy 123.968036 58.936579) (xy 124.019597 58.951417) (xy 124.064829 58.97549)
+					(xy 124.103845 59.008443) (xy 124.133733 59.048028) (xy 124.146711 59.076646) (xy 124.146711 58.643014)
+					(xy 124.265718 58.643014)
+				)
+			)
+			(polygon
+				(pts
+					(xy 124.496162 59.63) (xy 124.496162 58.943982) (xy 124.608147 58.943982) (xy 124.608147 59.103595)
+					(xy 124.60259 59.103595) (xy 124.623113 59.053473) (xy 124.651245 59.013139) (xy 124.687221 58.981107)
+					(xy 124.72973 58.95738) (xy 124.780734 58.94059) (xy 124.841948 58.931404) (xy 124.893789 58.927191)
+					(xy 124.904963 59.03362) (xy 124.818196 59.041985) (xy 124.756058 59.053432) (xy 124.707259 59.074449)
+					(xy 124.669086 59.104328) (xy 124.64036 59.143072) (xy 124.622767 59.189262) (xy 124.616573 59.245012)
+					(xy 124.616573 59.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 125.254169 59.642578) (xy 125.185405 59.635539) (xy 125.126003 59.615284) (xy 125.074814 59.582534)
+					(xy 125.036427 59.540423) (xy 125.018167 59.507409) (xy 125.00727 59.472174) (xy 125.003576 59.433995)
+					(xy 125.008593 59.384228) (xy 125.022575 59.344359) (xy 125.044853 59.31224) (xy 125.075214 59.286951)
+					(xy 125.118149 59.265461) (xy 125.177111 59.248553) (xy 125.275459 59.234959) (xy 125.417934 59.229624)
+					(xy 125.499145 59.229624) (xy 125.499145 59.30937) (xy 125.422147 59.30937) (xy 125.280731 59.314987)
+					(xy 125.226316 59.323075) (xy 125.188346 59.333916) (xy 125.157209 59.350244) (xy 125.13791 59.369637)
+					(xy 125.126624 59.394214) (xy 125.122522 59.426973) (xy 125.127368 59.463221) (xy 125.141262 59.493048)
+					(xy 125.164532 59.518014) (xy 125.19423 59.536107) (xy 125.230546 59.547514) (xy 125.275174 59.551598)
+					(xy 125.331314 59.544598) (xy 125.379466 59.524303) (xy 125.420359 59.492341) (xy 125.45225 59.450847)
+					(xy 125.472607 59.40226) (xy 125.479544 59.347227) (xy 125.479544 59.187615) (xy 125.474294 59.133079)
+					(xy 125.460289 59.0935) (xy 125.438939 59.065127) (xy 125.409427 59.044924) (xy 125.368647 59.031594)
+					(xy 125.312971 59.026598) (xy 125.253151 59.030947) (xy 125.193231 59.044122) (xy 125.134278 59.066372)
+					(xy 125.070743 59.100786) (xy 125.031542 59.014019) (xy 125.07256 58.989738) (xy 125.119042 58.9692)
+					(xy 125.168087 58.953146) (xy 125.21912 58.941235) (xy 125.270705 58.933817) (xy 125.319932 58.931404)
+					(xy 125.379254 58.934849) (xy 125.428921 58.944468) (xy 125.470446 58.959431) (xy 125.507967 58.981594)
+					(xy 125.538755 59.0103) (xy 125.563503 59.046198) (xy 125.580648 59.086678) (xy 125.591735 59.136412)
+					(xy 125.595743 59.197384) (xy 125.595743 59.63) (xy 125.487971 59.63) (xy 125.487971 59.4746) (xy 125.493527 59.4746)
+					(xy 125.473691 59.520914) (xy 125.445228 59.561428) (xy 125.408781 59.594989) (xy 125.364018 59.620901)
+					(xy 125.313434 59.636954)
+				)
+			)
+			(polygon
+				(pts
+					(xy 125.821912 59.63) (xy 125.821912 58.643014) (xy 125.940919 58.643014) (xy 125.940919 59.249225)
+					(xy 125.945132 59.249225) (xy 126.25874 58.943982) (xy 126.407118 58.943982) (xy 126.034708 59.305218)
+					(xy 126.036113 59.246416) (xy 126.439297 59.63) (xy 126.28811 59.63) (xy 125.945132 59.310774)
+					(xy 125.940919 59.310774) (xy 125.940919 59.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 126.850846 59.642578) (xy 126.777151 59.63749) (xy 126.713247 59.623009) (xy 126.657589 59.599897)
+					(xy 126.607469 59.567146) (xy 126.566221 59.526561) (xy 126.533025 59.477409) (xy 126.509502 59.422621)
+					(xy 126.494781 59.359681) (xy 126.489611 59.287021) (xy 126.494458 59.218002) (xy 126.508395 59.156798)
+					(xy 126.530888 59.102191) (xy 126.562457 59.052535) (xy 126.601243 59.011022) (xy 126.647819 58.976894)
+					(xy 126.699928 58.952017) (xy 126.758287 58.936713) (xy 126.824223 58.931404) (xy 126.888404 58.936428)
+					(xy 126.943155 58.95067) (xy 126.990125 58.973414) (xy 127.031641 59.005001) (xy 127.066265 59.04414)
+					(xy 127.094417 59.091749) (xy 127.11403 59.143811) (xy 127.126428 59.204196) (xy 127.130809 59.274382)
+					(xy 127.130809 59.316392) (xy 126.579248 59.316392) (xy 126.579248 59.235181) (xy 127.052407 59.235181)
+					(xy 127.028594 59.25759) (xy 127.022118 59.184599) (xy 127.004377 59.127667) (xy 126.976814 59.083323)
+					(xy 126.948834 59.056703) (xy 126.915169 59.037422) (xy 126.874653 59.025298) (xy 126.825628 59.02098)
+					(xy 126.780787 59.024684) (xy 126.741683 59.035304) (xy 126.707292 59.052487) (xy 126.676968 59.076092)
+					(xy 126.651641 59.105273) (xy 126.631027 59.14072) (xy 126.611413 59.200725) (xy 126.604405 59.274382)
+					(xy 126.604405 59.285617) (xy 126.607927 59.341998) (xy 126.617764 59.38908) (xy 126.633103 59.428377)
+					(xy 126.655394 59.46377) (xy 126.68344 59.492727) (xy 126.717795 59.515877) (xy 126.756259 59.532158)
+					(xy 126.800697 59.54238) (xy 126.85225 59.54598) (xy 126.91056 59.541635) (xy 126.968449 59.528517)
+					(xy 127.023735 59.505255) (xy 127.077625 59.468982) (xy 127.118231 59.553002) (xy 127.063352 59.590801)
+					(xy 126.995682 59.619497) (xy 126.923109 59.636862)
+				)
+			)
+			(polygon
+				(pts
+					(xy 127.292742 59.63) (xy 127.292742 59.481622) (xy 127.445333 59.481622) (xy 127.445333 59.63)
+				)
+			)
+			(polygon
+				(pts
+					(xy 127.922095 59.642578) (xy 127.853279 59.637289) (xy 127.793329 59.622165) (xy 127.740745 59.597821)
+					(xy 127.693818 59.56401) (xy 127.654815 59.522516) (xy 127.623142 59.472524) (xy 127.600709 59.417418)
+					(xy 127.586742 59.355088) (xy 127.581865 59.284213) (xy 127.58679 59.212347) (xy 127.600799 59.15008)
+					(xy 127.623142 59.095901) (xy 127.654851 59.046993) (xy 127.694071 59.006676) (xy 127.741477 58.974146)
+					(xy 127.794354 58.950873) (xy 127.854112 58.936437) (xy 127.922095 58.931404) (xy 127.988228 58.93719)
+					(xy 128.052276 58.954546) (xy 128.110698 58.982615) (xy 128.155896 59.018171) (xy 128.115291 59.106404)
+					(xy 128.072283 59.073152) (xy 128.025654 59.04974) (xy 127.976621 59.035395) (xy 127.93046 59.030811)
+					(xy 127.877254 59.035329) (xy 127.832502 59.048094) (xy 127.794625 59.068479) (xy 127.762482 59.096634)
+					(xy 127.737381 59.130939) (xy 127.718634 59.172772) (xy 127.706603 59.223683) (xy 127.702276 59.285617)
+					(xy 127.706522 59.345913) (xy 127.718434 59.396464) (xy 127.737176 59.43892) (xy 127.762482 59.4746)
+					(xy 127.794801 59.504057) (xy 127.832746 59.525269) (xy 127.877437 59.538499) (xy 127.93046 59.543171)
+					(xy 127.975394 59.538638) (xy 128.02425 59.524303) (xy 128.070975 59.501132) (xy 128.113887 59.468982)
+					(xy 128.154492 59.555811) (xy 128.109288 59.591415) (xy 128.050872 59.619497) (xy 127.987013 59.636836)
+				)
+			)
+			(polygon
+				(pts
+					(xy 128.266477 59.63) (xy 128.266477 59.553002) (xy 128.692071 59.005593) (xy 128.694879 59.039176)
+					(xy 128.272095 59.039176) (xy 128.272095 58.943982) (xy 128.80546 58.943982) (xy 128.80546 59.02098)
+					(xy 128.377058 59.571198) (xy 128.37425 59.533401) (xy 128.820848 59.533401) (xy 128.820848 59.63)
+				)
+			)
+		)
+	)
+	(gr_text "N"
+		(at 141.7 144.8 0)
+		(layer "F.SilkS")
+		(uuid "fe0cbebe-9c05-4cc1-8c78-0c78c2e8f45e")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify bottom)
+		)
 	)
 	(segment
 		(start 92.7 75.8)
@@ -18111,6 +18684,10 @@
 				(xy 83.418453 51.311302) (xy 83.46907 51.3005) (xy 168.93093 51.3005)
 			)
 		)
+	)
+	(group ""
+		(uuid "b84778e0-37d4-4864-a859-b8aae775e0bd")
+		(members "7b4af054-6fa3-4c37-8050-1c16a5a1897f" "e69fe93d-252a-4669-898f-ac86e07032b7")
 	)
 	(embedded_fonts no)
 )

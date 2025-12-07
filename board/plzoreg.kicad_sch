@@ -11299,7 +11299,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Heatsink Earth"
+		(property "Value" "Heatsink PE"
 			(at 52.07 189.2299 0)
 			(effects
 				(font
