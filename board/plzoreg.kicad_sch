@@ -1827,12 +1827,15 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Isolator:H11AA1"
+		(symbol "Isolator:LTV-354T"
+			(pin_names
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -5.334 4.953 0)
+				(at -5.334 4.826 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1840,8 +1843,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "H11AA1"
-				(at 0.635 4.953 0)
+			(property "Value" "LTV-354T"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1849,8 +1852,8 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DIP:DIP-6_W7.62mm"
-				(at -12.446 -4.953 0)
+			(property "Footprint" "Package_SO:SO-4_4.4x3.6mm_P2.54mm"
+				(at -5.08 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1860,8 +1863,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.vishay.com/docs/83608/h11aa1.pdf"
-				(at 19.304 16.002 0)
+			(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS70-2001-004/S_110_LTV-354T%2020140520.pdf"
+				(at 0.635 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1870,7 +1873,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "AC/DC NPN Optocoupler, DIP-6"
+			(property "Description" "AC/DC Optocoupler, Vce 35V, CTR 20%, SO-4"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1888,7 +1891,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DIP*W7.62mm*"
+			(property "ki_fp_filters" "SO*4.4x3.6mm*P2.54mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1897,93 +1900,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "H11AA1_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.635) (xy -0.762 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 2.54) (xy -3.175 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 0.635) (xy -1.397 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 0.635) (xy -1.397 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 0.635) (xy -2.032 -0.635) (xy -0.762 -0.635) (xy -1.397 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 -0.635) (xy -1.397 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.397 -2.54) (xy -3.175 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "H11AA1_1_1"
+			(symbol "LTV-354T_0_1"
 				(rectangle
 					(start -5.08 3.81)
 					(end 5.08 -3.81)
@@ -1997,7 +1914,7 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 -2.54) (xy -3.175 -2.54) (xy -3.175 2.54) (xy -5.08 2.54)
+						(xy -5.08 2.54) (xy -1.27 2.54) (xy -1.27 -0.635)
 					)
 					(stroke
 						(width 0)
@@ -2009,7 +1926,30 @@
 				)
 				(polyline
 					(pts
-						(xy -3.81 -0.635) (xy -2.54 -0.635)
+						(xy -3.81 0.635) (xy -2.54 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.175 2.54)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 0.635) (xy -3.81 -0.635) (xy -2.54 -0.635) (xy -3.175 0.635)
 					)
 					(stroke
 						(width 0.254)
@@ -2021,7 +1961,42 @@
 				)
 				(polyline
 					(pts
-						(xy -3.175 -0.635) (xy -3.81 0.635) (xy -2.54 0.635) (xy -3.175 -0.635)
+						(xy -3.175 -0.635) (xy -3.175 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -3.175 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.175 -2.54)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -0.635) (xy -0.635 -0.635)
 					)
 					(stroke
 						(width 0.254)
@@ -2033,7 +2008,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.127 0.508) (xy 1.143 0.508) (xy 0.762 0.381) (xy 0.762 0.635) (xy 1.143 0.508)
+						(xy -1.27 -0.635) (xy -1.27 -2.54) (xy -5.08 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -2045,7 +2020,19 @@
 				)
 				(polyline
 					(pts
-						(xy -0.127 -0.508) (xy 1.143 -0.508) (xy 0.762 -0.635) (xy 0.762 -0.381) (xy 1.143 -0.508)
+						(xy -1.27 -0.635) (xy -1.905 0.635) (xy -0.635 0.635) (xy -1.27 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.127 0.508) (xy 1.397 0.508) (xy 1.016 0.381) (xy 1.016 0.635) (xy 1.397 0.508)
 					)
 					(stroke
 						(width 0)
@@ -2057,19 +2044,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.667 -0.254) (xy 2.667 -2.286)
-					)
-					(stroke
-						(width 0.3556)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.667 -1.143) (xy 3.81 0)
+						(xy 0.127 -0.508) (xy 1.397 -0.508) (xy 1.016 -0.635) (xy 1.016 -0.381) (xy 1.397 -0.508)
 					)
 					(stroke
 						(width 0)
@@ -2081,7 +2056,19 @@
 				)
 				(polyline
 					(pts
-						(xy 2.667 -1.397) (xy 3.81 -2.54)
+						(xy 2.54 1.905) (xy 2.54 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy 4.445 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2093,7 +2080,19 @@
 				)
 				(polyline
 					(pts
-						(xy 3.683 -2.413) (xy 3.429 -1.905) (xy 3.175 -2.159) (xy 3.683 -2.413)
+						(xy 3.048 -1.651) (xy 3.556 -1.143) (xy 4.064 -2.159) (xy 3.048 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54) (xy 5.08 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2105,19 +2104,19 @@
 				)
 				(polyline
 					(pts
-						(xy 3.81 0) (xy 5.08 0)
+						(xy 4.445 -2.54) (xy 2.54 -0.635)
 					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
 				(polyline
 					(pts
-						(xy 3.81 -2.54) (xy 5.08 -2.54)
+						(xy 4.445 -2.54) (xy 5.08 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -2127,18 +2126,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 1.905 2.54) (xy 1.905 -1.27) (xy 2.54 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "LTV-354T_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -2175,25 +2164,6 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at -5.08 0 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin passive line
 					(at 7.62 2.54 180)
 					(length 2.54)
@@ -2204,25 +2174,7 @@
 							)
 						)
 					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2240,7 +2192,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4189,7 +4141,7 @@
 		(uuid "e125d11b-ebe3-478c-a7ca-788003acfbf3")
 	)
 	(junction
-		(at 107.95 80.01)
+		(at 107.95 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0bb6e0b1-b574-46d2-8cde-83ba449033a3")
@@ -4345,7 +4297,7 @@
 		(uuid "eb65c245-0384-453f-8c00-611e0732b593")
 	)
 	(junction
-		(at 99.06 80.01)
+		(at 99.06 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f941bf41-4a26-4f62-aa08-eb4829603baf")
@@ -4353,10 +4305,6 @@
 	(no_connect
 		(at 248.92 73.66)
 		(uuid "011475b6-748f-47f8-92a9-d3877d1100da")
-	)
-	(no_connect
-		(at 92.71 77.47)
-		(uuid "08311aa9-e61e-4035-bce3-fa232dbcae9a")
 	)
 	(no_connect
 		(at 205.74 66.04)
@@ -4416,7 +4364,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 80.01) (xy 107.95 80.01)
+			(xy 99.06 77.47) (xy 107.95 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4846,7 +4794,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 80.01) (xy 118.11 80.01)
+			(xy 107.95 77.47) (xy 118.11 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4966,7 +4914,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 80.01) (xy 99.06 83.82)
+			(xy 99.06 77.47) (xy 99.06 81.28)
 		)
 		(stroke
 			(width 0)
@@ -4996,7 +4944,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 91.44) (xy 92.71 82.55)
+			(xy 92.71 88.9) (xy 92.71 82.55)
 		)
 		(stroke
 			(width 0)
@@ -5086,16 +5034,6 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 80.01) (xy 99.06 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d050faa5-5970-4b63-998b-15a81197559c")
-	)
-	(wire
-		(pts
 			(xy 194.31 106.68) (xy 199.39 106.68)
 		)
 		(stroke
@@ -5116,7 +5054,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 80.01) (xy 99.06 76.2)
+			(xy 99.06 77.47) (xy 99.06 73.66)
 		)
 		(stroke
 			(width 0)
@@ -5133,6 +5071,16 @@
 			(type default)
 		)
 		(uuid "da77b2e5-f5cc-4bc5-9333-ceb5e7aaf27e")
+	)
+	(wire
+		(pts
+			(xy 92.71 77.47) (xy 99.06 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e006e8c1-91c1-44f4-83f0-4a5f44bf11a8")
 	)
 	(wire
 		(pts
@@ -5535,7 +5483,7 @@
 		(uuid "61bde2f4-a086-4e69-adb0-6f923d5f46fc")
 	)
 	(label "ZCD"
-		(at 118.11 80.01 0)
+		(at 118.11 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6905,7 +6853,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 107.95 80.01 0)
+		(at 107.95 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6913,7 +6861,7 @@
 		(dnp no)
 		(uuid "2a89559c-86d4-4f8e-ab7e-1d32fff383d6")
 		(property "Reference" "TP2"
-			(at 109.474 75.438 0)
+			(at 109.474 72.898 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6922,7 +6870,7 @@
 			)
 		)
 		(property "Value" "ZCD"
-			(at 109.474 77.47 0)
+			(at 109.474 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6931,7 +6879,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-			(at 113.03 80.01 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6940,7 +6888,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 80.01 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6949,7 +6897,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 107.95 80.01 0)
+			(at 107.95 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7035,7 +6983,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 99.06 91.44 0)
+		(at 99.06 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7044,7 +6992,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e27a8bb-2745-44a7-a4e3-1cf9d3970310")
 		(property "Reference" "#PWR05"
-			(at 99.06 97.79 0)
+			(at 99.06 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7053,7 +7001,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 99.06 96.52 0)
+			(at 99.06 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7061,7 +7009,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 91.44 0)
+			(at 99.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7070,7 +7018,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 91.44 0)
+			(at 99.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7079,7 +7027,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 91.44 0)
+			(at 99.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7094,88 +7042,6 @@
 			(project "plzoreg"
 				(path "/ec1239b0-05b9-4998-8e2e-5748175a8483"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Isolator:H11AA1")
-		(at 85.09 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "31a70e5a-19c0-415b-ba15-69e776bf886b")
-		(property "Reference" "U2"
-			(at 88.9 71.882 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "H11AA1"
-			(at 91.44 73.914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-6_W8.89mm_SMDSocket_LongPads"
-			(at 72.644 84.963 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/83608/h11aa1.pdf"
-			(at 104.394 64.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "AC/DC NPN Optocoupler, DIP-6"
-			(at 85.09 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "64854267-c8a8-4d65-b77c-f8af3c5ec4e4")
-		)
-		(pin "5"
-			(uuid "5a0900f1-ac97-40c9-b5e1-bcb1a043069e")
-		)
-		(pin "3"
-			(uuid "4ae823e5-dec0-42d7-93f0-1f82a03bd9b8")
-		)
-		(pin "4"
-			(uuid "eb9aad41-3adc-4eda-be4b-41ff36a3f165")
-		)
-		(pin "2"
-			(uuid "f9863656-b14b-4600-9382-63e9521caf33")
-		)
-		(pin "1"
-			(uuid "3b4581c0-3010-4ffc-80c7-08486655d98a")
-		)
-		(instances
-			(project ""
-				(path "/ec1239b0-05b9-4998-8e2e-5748175a8483"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -8427,7 +8293,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 99.06 87.63 0)
+		(at 99.06 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8436,7 +8302,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d615017-b729-47e9-825e-e8055cb0909c")
 		(property "Reference" "C2"
-			(at 102.87 86.3599 0)
+			(at 102.87 83.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8445,7 +8311,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 102.87 88.8999 0)
+			(at 102.87 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8454,7 +8320,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 100.0252 91.44 0)
+			(at 100.0252 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8463,7 +8329,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 99.06 87.63 0)
+			(at 99.06 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8472,7 +8338,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 99.06 87.63 0)
+			(at 99.06 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8903,6 +8769,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Isolator:LTV-354T")
+		(at 85.09 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "796c1240-867f-4ffd-9924-6ea4d686b33c")
+		(property "Reference" "U6"
+			(at 85.09 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LTV-354T"
+			(at 85.09 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SO-4_4.4x3.6mm_P2.54mm"
+			(at 80.01 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS70-2001-004/S_110_LTV-354T%2020140520.pdf"
+			(at 85.725 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "AC/DC Optocoupler, Vce 35V, CTR 20%, SO-4"
+			(at 85.09 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "32adeec0-d695-4c4d-9a43-cd42b76fa6b9")
+		)
+		(pin "4"
+			(uuid "515bc138-7a66-4cc7-b920-3abb082863e7")
+		)
+		(pin "2"
+			(uuid "b5b9d01a-9201-48d3-b032-6e9d57431ae8")
+		)
+		(pin "1"
+			(uuid "2166a556-882c-4b3d-9a73-db2f3e1abbb9")
+		)
+		(instances
+			(project ""
+				(path "/ec1239b0-05b9-4998-8e2e-5748175a8483"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 199.39 96.52 90)
 		(unit 1)
@@ -9309,7 +9252,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 91.44 0)
+		(at 92.71 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9318,7 +9261,7 @@
 		(fields_autoplaced yes)
 		(uuid "9a1a50a5-d356-40a1-9bc7-b4d3dd4fe0b2")
 		(property "Reference" "#PWR01"
-			(at 92.71 97.79 0)
+			(at 92.71 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9327,7 +9270,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 96.52 0)
+			(at 92.71 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9335,7 +9278,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 91.44 0)
+			(at 92.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9344,7 +9287,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 91.44 0)
+			(at 92.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9353,7 +9296,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 91.44 0)
+			(at 92.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10039,7 +9982,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k5"
 			(at 109.22 114.3 90)
 			(effects
 				(font
@@ -10423,7 +10366,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 99.06 68.58 0)
+		(at 99.06 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10432,7 +10375,7 @@
 		(fields_autoplaced yes)
 		(uuid "d8130310-5f37-4884-be26-955b2a83af7d")
 		(property "Reference" "#PWR04"
-			(at 99.06 72.39 0)
+			(at 99.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10441,7 +10384,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 99.06 63.5 0)
+			(at 99.06 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10449,7 +10392,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 68.58 0)
+			(at 99.06 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10458,7 +10401,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 68.58 0)
+			(at 99.06 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10467,7 +10410,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 99.06 68.58 0)
+			(at 99.06 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10506,7 +10449,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u"
 			(at 110.49 124.4599 0)
 			(effects
 				(font
@@ -11038,7 +10981,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 99.06 72.39 0)
+		(at 99.06 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11047,7 +10990,7 @@
 		(fields_autoplaced yes)
 		(uuid "f03bbf58-1e04-443d-9d07-be3345169238")
 		(property "Reference" "R8"
-			(at 101.6 71.1199 0)
+			(at 101.6 68.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11056,7 +10999,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 101.6 73.6599 0)
+			(at 101.6 71.1199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11065,7 +11008,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 97.282 72.39 90)
+			(at 97.282 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11074,7 +11017,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 99.06 72.39 0)
+			(at 99.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11083,7 +11026,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 99.06 72.39 0)
+			(at 99.06 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
