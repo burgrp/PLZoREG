@@ -9,7 +9,7 @@ CMSIS_PACK = PY32F030
 IMAGE=image.elf
 
 build:
-	tinygo build --size html --serial uart --scheduler tasks --gc leaking --target ${TARGET_TINYGO} -o ${IMAGE} .
+	tinygo build --size html --serial rtt --scheduler tasks --gc leaking --target ${TARGET_TINYGO} -o ${IMAGE} .
 
 flash: build
 	pyocd load -t ${TARGET_PYOCD} ${IMAGE}
