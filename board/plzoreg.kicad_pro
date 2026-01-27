@@ -580,7 +580,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "plzoreg.step",
+      "step": "../../../tmp/plzoreg.step",
       "svg": "",
       "vrml": ""
     },

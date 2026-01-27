@@ -10860,7 +10860,7 @@
 				)
 			)
 		)
-		(property "Value" "1k5"
+		(property "Value" "10k"
 			(at 109.22 114.3 90)
 			(effects
 				(font
