@@ -25,8 +25,7 @@ const (
 )
 
 type Keyboard struct {
-	Keys   *Keys
-	Events chan KeyEvent
+	Keys *Keys
 }
 
 func New(keys Keys) *Keyboard {
@@ -34,10 +33,10 @@ func New(keys Keys) *Keyboard {
 		key.Pin.Configure(machine.PinConfig{Mode: machine.PinInputPullup})
 	}
 
-	return &Keyboard{Keys: &keys, Events: make(chan KeyEvent)}
+	return &Keyboard{Keys: &keys}
 }
 
-func (kbd *Keyboard) Run() {
+func (kbd *Keyboard) Run(handler func(e KeyEvent)) {
 	for {
 		for i := range *kbd.Keys {
 			key := &(*kbd.Keys)[i]
@@ -46,18 +45,18 @@ func (kbd *Keyboard) Run() {
 			if down {
 				if key.DownMs == 0 {
 					key.DownMs = time.Now().UnixMilli()
-					kbd.Events <- KeyEvent{ID: key.ID, Kind: KeyDown}
-					kbd.Events <- KeyEvent{ID: key.ID, Kind: KeyPress}
+					handler(KeyEvent{ID: key.ID, Kind: KeyDown})
 				} else {
 					now := time.Now().UnixMilli()
 					if now-key.DownMs > 500 {
-						kbd.Events <- KeyEvent{ID: key.ID, Kind: KeyPress}
+						handler(KeyEvent{ID: key.ID, Kind: KeyPress})
 					}
 				}
 			} else {
 				if key.DownMs != 0 {
 					key.DownMs = 0
-					kbd.Events <- KeyEvent{ID: key.ID, Kind: KeyUp}
+					handler(KeyEvent{ID: key.ID, Kind: KeyPress})
+					handler(KeyEvent{ID: key.ID, Kind: KeyUp})
 				}
 			}
 
