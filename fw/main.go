@@ -47,8 +47,8 @@ func updateDisplay() {
 	case PageVSense:
 		display.NumberAt(State.VSense, false, -1, 2)
 	case PageTSense:
-		display.NumberAt(State.TSense, false, -1, 2)
-		display.GlyphAt(0x78, 0)
+		display.NumberAt(State.TSense, false, -1, 1)
+		display.GlyphAt(0x63, 2)
 	case PageVTarget:
 		dp := -1
 		if State.SettingBlink {
@@ -127,16 +127,14 @@ func initKeyboard() {
 }
 
 func saveSettings() {
-	// TODO save settings to persistent storage
 }
 
-func loadSessings() {
-	// TODO load settings from persistent storage
+func loadSettings() {
 }
 
 func main() {
 
-	loadSessings()
+	loadSettings()
 
 	initDisplay()
 
