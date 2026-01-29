@@ -83,6 +83,7 @@ func handleKeyDoublePress() {
 		State.SettingBlink = true
 		State.Page = PageVTarget
 	case PageVTarget:
+		saveSettings()
 		State.Page = PageVSense
 	}
 	updateDisplay()
@@ -125,7 +126,17 @@ func initKeyboard() {
 
 }
 
+func saveSettings() {
+	// TODO save settings to persistent storage
+}
+
+func loadSessings() {
+	// TODO load settings from persistent storage
+}
+
 func main() {
+
+	loadSessings()
 
 	initDisplay()
 
