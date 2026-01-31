@@ -18,14 +18,17 @@ const (
 	PageCount
 )
 
+const FlashKeyV1 = 0xDEADBEEF
+
 const (
 	KeyUp   = 1
 	KeyDown = -1
 )
 
 const (
-	VTargetMin = 100
-	VTargetMax = 240
+	VTargetMin     = 100
+	VTargetMax     = 240
+	VTargetDefault = 200
 )
 
 type SystemState struct {
@@ -148,19 +151,34 @@ func initKeyboard() {
 
 }
 
-var FlashDataPageAddr *[flash.WordsPerPage]uint32 = (*[flash.WordsPerPage]uint32)(unsafe.Pointer(uintptr(flash.MainFlashBase + flash.MainFlashSize - flash.PageSize)))
-var FlashDataPageAddrAsUint32 uint32 = uint32(uintptr(unsafe.Pointer(FlashDataPageAddr)))
+func GetFlashDataAddr() uint32 {
+	return flash.MainFlashBase + flash.MainFlashSize - flash.PageSize
+}
+
+func GetFlashDataWords() *[flash.WordsPerPage]uint32 {
+	return (*[flash.WordsPerPage]uint32)(unsafe.Pointer(uintptr(GetFlashDataAddr())))
+}
 
 func saveSettings() {
 	var data [flash.WordsPerPage]uint32
-	data[0] = uint32(State.VTarget)
+	data[0] = uint32(FlashKeyV1)
+	data[1] = uint32(State.VTarget)
+
+	FlashDataPageAddrAsUint32 := uint32(GetFlashDataAddr())
 
 	flash.ErasePage(FlashDataPageAddrAsUint32)
 	flash.ProgramPage(FlashDataPageAddrAsUint32, &data)
 }
 
 func loadSettings() {
-	State.VTarget = int(FlashDataPageAddr[0])
+	flashDataPageWords := GetFlashDataWords()
+	if flashDataPageWords[0] != uint32(FlashKeyV1) {
+		// no valid data, use defaults
+		State.VTarget = VTargetDefault
+		return
+	}
+
+	State.VTarget = int(flashDataPageWords[1])
 }
 
 func main() {

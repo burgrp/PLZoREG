@@ -1,3 +1,5 @@
+//go:build py32
+
 package flash
 
 import (
@@ -11,12 +13,6 @@ import (
 )
 
 const (
-	MainFlashBase = 0x08000000
-	MainFlashSize = 64 * 1024
-
-	PageSize     = 128
-	WordsPerPage = PageSize / 4
-
 	key1 = 0x45670123
 	key2 = 0xCDEF89AB
 )
