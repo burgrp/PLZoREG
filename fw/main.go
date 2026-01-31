@@ -13,15 +13,27 @@ type Page int
 
 const (
 	PageVSense Page = iota
-	PageTSense
 	PageVTarget
+	PageTSense
+	PageCount
+)
+
+const (
+	KeyUp   = 1
+	KeyDown = -1
+)
+
+const (
+	VTargetMin = 100
+	VTargetMax = 240
 )
 
 type SystemState struct {
 	Page         Page
 	VSense       int
-	TSense       int
 	VTarget      int
+	TSense       int
+	InSetting    bool
 	SettingBlink bool
 }
 
@@ -48,53 +60,61 @@ func updateDisplay() {
 	switch State.Page {
 	case PageVSense:
 		display.NumberAt(State.VSense, false, -1, 2)
-	case PageTSense:
-		display.NumberAt(State.TSense, false, -1, 1)
-		display.GlyphAt(0x63, 2)
 	case PageVTarget:
 		dp := -1
-		if State.SettingBlink {
+		if !State.InSetting || State.SettingBlink {
 			dp = 2
 		}
 		display.NumberAt(State.VTarget, false, dp, 2)
+	case PageTSense:
+		display.NumberAt(State.TSense, false, -1, 1)
+		display.GlyphAt(0x63, 2)
 	}
 }
 
 func handleKeyArrow(keyID int) {
-	switch State.Page {
-	case PageVSense:
-		State.Page = PageTSense
-	case PageTSense:
-		State.Page = PageVSense
-	case PageVTarget:
+
+	if State.Page == PageVTarget && State.InSetting {
 		v := State.VTarget + keyID
-		if v < 100 {
-			v = 100
+		if v < VTargetMin {
+			v = VTargetMin
 		}
-		if v > 240 {
-			v = 240
+		if v > VTargetMax {
+			v = VTargetMax
 		}
 		State.VTarget = v
+
+	} else {
+		p := Page(int(State.Page) - keyID)
+		if p < 0 {
+			p = PageCount - 1
+		}
+		if p >= PageCount {
+			p = 0
+		}
+		State.Page = p
 	}
+
 	updateDisplay()
 }
 
 func handleKeyDoublePress() {
-	switch State.Page {
-	case PageVSense:
-		State.SettingBlink = true
-		State.Page = PageVTarget
-	case PageVTarget:
-		State.Page = PageVSense
-		saveSettings()
+	if State.Page == PageVTarget {
+		if !State.InSetting {
+			State.SettingBlink = true
+			State.InSetting = true
+		} else {
+			State.InSetting = false
+			saveSettings()
+		}
 	}
 	updateDisplay()
 }
 
 func initKeyboard() {
 	kbd := keyboard.New(keyboard.Keys{
-		{Pin: machine.PA11, ID: 1},
-		{Pin: machine.PA12, ID: -1},
+		{Pin: machine.PA11, ID: KeyUp},
+		{Pin: machine.PA12, ID: KeyDown},
 	})
 
 	var bothDownMs int64
