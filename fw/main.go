@@ -37,7 +37,7 @@ type SystemState struct {
 	VTarget      int
 	TSense       int
 	InSetting    bool
-	SettingBlink bool
+	DisplayBlink bool
 }
 
 var State = SystemState{
@@ -65,7 +65,7 @@ func updateDisplay() {
 		display.NumberAt(State.VSense, false, -1, 2)
 	case PageVTarget:
 		dp := -1
-		if !State.InSetting || State.SettingBlink {
+		if !State.InSetting || State.DisplayBlink {
 			dp = 2
 		}
 		display.NumberAt(State.VTarget, false, dp, 2)
@@ -104,7 +104,7 @@ func handleKeyArrow(keyID int) {
 func handleKeyDoublePress() {
 	if State.Page == PageVTarget {
 		if !State.InSetting {
-			State.SettingBlink = true
+			State.DisplayBlink = true
 			State.InSetting = true
 		} else {
 			State.InSetting = false
@@ -194,7 +194,7 @@ func main() {
 	for {
 		// not to only sleep here, we refresh the display periodically just for a case it needs to blink
 		time.Sleep(500 * time.Millisecond)
-		State.SettingBlink = !State.SettingBlink
+		State.DisplayBlink = !State.DisplayBlink
 		updateDisplay()
 	}
 }
