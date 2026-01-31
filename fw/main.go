@@ -2,9 +2,11 @@ package main
 
 import (
 	"machine"
-	"template/display"
-	"template/keyboard"
+	"plzoreg/display"
+	"plzoreg/flash"
+	"plzoreg/keyboard"
 	"time"
+	"unsafe"
 )
 
 type Page int
@@ -83,8 +85,8 @@ func handleKeyDoublePress() {
 		State.SettingBlink = true
 		State.Page = PageVTarget
 	case PageVTarget:
-		saveSettings()
 		State.Page = PageVSense
+		saveSettings()
 	}
 	updateDisplay()
 }
@@ -126,10 +128,19 @@ func initKeyboard() {
 
 }
 
+var FlashDataPageAddr *[flash.WordsPerPage]uint32 = (*[flash.WordsPerPage]uint32)(unsafe.Pointer(uintptr(flash.MainFlashBase + flash.MainFlashSize - flash.PageSize)))
+var FlashDataPageAddrAsUint32 uint32 = uint32(uintptr(unsafe.Pointer(FlashDataPageAddr)))
+
 func saveSettings() {
+	var data [flash.WordsPerPage]uint32
+	data[0] = uint32(State.VTarget)
+
+	flash.ErasePage(FlashDataPageAddrAsUint32)
+	flash.ProgramPage(FlashDataPageAddrAsUint32, &data)
 }
 
 func loadSettings() {
+	State.VTarget = int(FlashDataPageAddr[0])
 }
 
 func main() {
