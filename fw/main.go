@@ -57,11 +57,11 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageDuty,
+	Page:      PageTSense,
 	InSetting: false,
-	VSense:    234,
-	TSense:    52,
-	VTarget:   230,
+	VSense:    0,
+	TSense:    0,
+	VTarget:   VTargetDefault,
 	Error:     ErrorNone,
 	Duty:      0,
 }
@@ -239,11 +239,9 @@ func loadSettings() {
 func main() {
 
 	loadSettings()
-
 	initDisplay()
-
 	initKeyboard()
-
+	initAdc()
 	initPwm()
 
 	updateDisplay()
@@ -261,9 +259,13 @@ func main() {
 			}
 		}
 
-		if State.TSense > 90 {
-			State.Error = ErrorOverTemp
-		}
+		v, t := readAdcValues()
+		State.VSense = v
+		State.TSense = t
+
+		// if State.TSense > 90 {
+		// 	State.Error = ErrorOverTemp
+		// }
 
 		if State.Error == ErrorNone {
 
@@ -272,7 +274,6 @@ func main() {
 				d := State.Duty
 
 				if State.VSense < State.VTarget {
-					println("A", d, State.VSense, State.VTarget)
 					if d > 0 {
 						d--
 					}
@@ -281,7 +282,6 @@ func main() {
 					if d < 100 {
 						d++
 					}
-					println("B", d)
 				}
 
 				State.Duty = d

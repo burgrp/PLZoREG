@@ -4,7 +4,6 @@ import (
 	"device/py32"
 	"machine"
 	"runtime/interrupt"
-	"time"
 )
 
 const (
@@ -49,12 +48,12 @@ func initPwm() {
 
 	setPwm(0)
 
-	go func() {
-		for {
-			println("PWM period:", period, "ZCD width:", zcdWidth, "Duty:", State.Duty)
-			time.Sleep(1 * time.Second)
-		}
-	}()
+	// go func() {
+	// 	for {
+	// 		println("PWM period:", period, "ZCD width:", zcdWidth, "Duty:", State.Duty)
+	// 		time.Sleep(1 * time.Second)
+	// 	}
+	// }()
 
 }
 
