@@ -16,9 +16,9 @@ func DigitAt(digit int, dp bool, position int) {
 	}
 }
 
-func NumberAt(number int, leadingZero bool, dotPosition, basePosition int) {
-	for p := basePosition; p >= 0; p-- {
-		if number == 0 && p < basePosition {
+func NumberAt(number int, leadingZero bool, dotPosition, basePosition, length int) {
+	for p := basePosition; p >= basePosition-length+1; p-- {
+		if !leadingZero && number == 0 && p < basePosition {
 			GlyphAt(0, p)
 		} else {
 			DigitAt(number%10, p == dotPosition, p)

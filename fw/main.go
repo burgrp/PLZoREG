@@ -15,6 +15,7 @@ const (
 	PageVSense Page = iota
 	PageVTarget
 	PageTSense
+	PageDuty
 	PageCount
 )
 
@@ -31,6 +32,13 @@ const (
 	VTargetDefault = 200
 )
 
+type ErrorCode int
+
+const (
+	ErrorNone   ErrorCode = iota
+	ErrorNoSync           // No ZeroCross sync detected
+)
+
 type SystemState struct {
 	Page         Page
 	VSense       int
@@ -38,13 +46,18 @@ type SystemState struct {
 	TSense       int
 	InSetting    bool
 	DisplayBlink bool
+	Error        ErrorCode
+	TestDuty     int
 }
 
 var State = SystemState{
-	Page:    PageVSense,
-	VSense:  234,
-	TSense:  52,
-	VTarget: 230,
+	Page:      PageDuty,
+	InSetting: true,
+	VSense:    234,
+	TSense:    52,
+	VTarget:   230,
+	Error:     ErrorNone,
+	TestDuty:  50,
 }
 
 func initDisplay() {
@@ -52,32 +65,46 @@ func initDisplay() {
 	display.GlyphAt(0xFF, 0)
 	display.GlyphAt(0xFF, 1)
 	display.GlyphAt(0xFF, 2)
-	time.Sleep(1 * time.Second)
+	time.Sleep(500 * time.Millisecond)
 	display.GlyphAt(0, 0)
 	display.GlyphAt(0, 1)
 	display.GlyphAt(0, 2)
-	time.Sleep(100 * time.Millisecond)
+	time.Sleep(50 * time.Millisecond)
 }
 
 func updateDisplay() {
+
+	if State.Error != ErrorNone {
+		display.GlyphAt(0x79, 0) // E
+		display.NumberAt(int(State.Error), true, -1, 2, 2)
+		return
+	}
+
 	switch State.Page {
 	case PageVSense:
-		display.NumberAt(State.VSense, false, -1, 2)
+		display.NumberAt(State.VSense, false, -1, 2, 3)
 	case PageVTarget:
 		dp := -1
 		if !State.InSetting || State.DisplayBlink {
 			dp = 2
 		}
-		display.NumberAt(State.VTarget, false, dp, 2)
+		display.NumberAt(State.VTarget, false, dp, 2, 3)
 	case PageTSense:
-		display.NumberAt(State.TSense, false, -1, 1)
+		display.NumberAt(State.TSense, false, -1, 1, 2)
 		display.GlyphAt(0x63, 2)
+	case PageDuty:
+		dp := -1
+		if !State.InSetting || State.DisplayBlink {
+			dp = 0
+		}
+		display.NumberAt(State.TestDuty, true, dp, 2, 3)
 	}
 }
 
 func handleKeyArrow(keyID int) {
 
-	if State.Page == PageVTarget && State.InSetting {
+	switch {
+	case State.Page == PageVTarget && State.InSetting:
 		v := State.VTarget + keyID
 		if v < VTargetMin {
 			v = VTargetMin
@@ -87,7 +114,17 @@ func handleKeyArrow(keyID int) {
 		}
 		State.VTarget = v
 
-	} else {
+	case State.Page == PageDuty && State.InSetting:
+		v := State.TestDuty + keyID*5
+		if v < 0 {
+			v = 0
+		}
+		if v > 100 {
+			v = 100
+		}
+		State.TestDuty = v
+
+	default:
 		p := Page(int(State.Page) - keyID)
 		if p < 0 {
 			p = PageCount - 1
@@ -102,7 +139,8 @@ func handleKeyArrow(keyID int) {
 }
 
 func handleKeyDoublePress() {
-	if State.Page == PageVTarget {
+	switch State.Page {
+	case PageVTarget:
 		if !State.InSetting {
 			State.DisplayBlink = true
 			State.InSetting = true
@@ -110,6 +148,8 @@ func handleKeyDoublePress() {
 			State.InSetting = false
 			saveSettings()
 		}
+	case PageDuty:
+		State.InSetting = !State.InSetting
 	}
 	updateDisplay()
 }
