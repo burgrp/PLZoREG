@@ -12,6 +12,11 @@ import (
 type Page int
 
 const (
+	pinKeyUp   = machine.PA11
+	pinKeyDown = machine.PA12
+)
+
+const (
 	PageVSense Page = iota
 	PageVTarget
 	PageTSense
@@ -156,8 +161,8 @@ func handleKeyDoublePress() {
 
 func initKeyboard() {
 	kbd := keyboard.New(keyboard.Keys{
-		{Pin: machine.PA11, ID: KeyUp},
-		{Pin: machine.PA12, ID: KeyDown},
+		{Pin: pinKeyUp, ID: KeyUp},
+		{Pin: pinKeyDown, ID: KeyDown},
 	})
 
 	var bothDownMs int64
@@ -228,6 +233,8 @@ func main() {
 	initDisplay()
 
 	initKeyboard()
+
+	initPwm()
 
 	updateDisplay()
 
