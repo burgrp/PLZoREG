@@ -40,29 +40,30 @@ const (
 type ErrorCode int
 
 const (
-	ErrorNone   ErrorCode = iota
-	ErrorNoSync           // No ZeroCross sync detected
+	ErrorNone     ErrorCode = iota
+	ErrorNoSync             // No ZeroCross sync detected
+	ErrorOverTemp           // Overtemperature detected
 )
 
 type SystemState struct {
 	Page         Page
-	VSense       int
-	VTarget      int
-	TSense       int
+	VSense       uint32
+	VTarget      uint32
+	TSense       uint32
 	InSetting    bool
 	DisplayBlink bool
 	Error        ErrorCode
-	TestDuty     int
+	Duty         uint32
 }
 
 var State = SystemState{
 	Page:      PageDuty,
-	InSetting: true,
+	InSetting: false,
 	VSense:    234,
 	TSense:    52,
 	VTarget:   230,
 	Error:     ErrorNone,
-	TestDuty:  50,
+	Duty:      0,
 }
 
 func initDisplay() {
@@ -81,7 +82,7 @@ func updateDisplay() {
 
 	if State.Error != ErrorNone {
 		display.GlyphAt(0x79, 0) // E
-		display.NumberAt(int(State.Error), true, -1, 2, 2)
+		display.NumberAt(uint32(State.Error), true, -1, 2, 2)
 		return
 	}
 
@@ -102,32 +103,36 @@ func updateDisplay() {
 		if !State.InSetting || State.DisplayBlink {
 			dp = 0
 		}
-		display.NumberAt(State.TestDuty, true, dp, 2, 3)
+		display.NumberAt(State.Duty, true, dp, 2, 3)
 	}
 }
 
 func handleKeyArrow(keyID int) {
 
+	if State.Error != ErrorNone {
+		return
+	}
+
 	switch {
 	case State.Page == PageVTarget && State.InSetting:
-		v := State.VTarget + keyID
+		v := int(State.VTarget) + keyID
 		if v < VTargetMin {
 			v = VTargetMin
 		}
 		if v > VTargetMax {
 			v = VTargetMax
 		}
-		State.VTarget = v
+		State.VTarget = uint32(v)
 
 	case State.Page == PageDuty && State.InSetting:
-		v := State.TestDuty + keyID*5
+		v := int(State.Duty) + keyID*5
 		if v < 0 {
 			v = 0
 		}
 		if v > 100 {
 			v = 100
 		}
-		State.TestDuty = v
+		State.Duty = uint32(v)
 
 	default:
 		p := Page(int(State.Page) - keyID)
@@ -144,6 +149,11 @@ func handleKeyArrow(keyID int) {
 }
 
 func handleKeyDoublePress() {
+
+	if State.Error != ErrorNone {
+		return
+	}
+
 	switch State.Page {
 	case PageVTarget:
 		if !State.InSetting {
@@ -223,7 +233,7 @@ func loadSettings() {
 		return
 	}
 
-	State.VTarget = int(flashDataPageWords[1])
+	State.VTarget = flashDataPageWords[1]
 }
 
 func main() {
@@ -242,6 +252,48 @@ func main() {
 		// not to only sleep here, we refresh the display periodically just for a case it needs to blink
 		time.Sleep(500 * time.Millisecond)
 		State.DisplayBlink = !State.DisplayBlink
+
+		if !isSynchronized() {
+			State.Error = ErrorNoSync
+		} else {
+			if State.Error == ErrorNoSync {
+				State.Error = ErrorNone
+			}
+		}
+
+		if State.TSense > 90 {
+			State.Error = ErrorOverTemp
+		}
+
+		if State.Error == ErrorNone {
+
+			if !(State.Page == PageDuty && State.InSetting) {
+
+				d := State.Duty
+
+				if State.VSense < State.VTarget {
+					println("A", d, State.VSense, State.VTarget)
+					if d > 0 {
+						d--
+					}
+
+				} else {
+					if d < 100 {
+						d++
+					}
+					println("B", d)
+				}
+
+				State.Duty = d
+
+			}
+
+		} else {
+			State.Duty = 0
+		}
+
+		setPwm(State.Duty)
+
 		updateDisplay()
 	}
 }
