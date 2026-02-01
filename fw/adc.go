@@ -21,19 +21,8 @@ func initAdc() {
 
 }
 
-var prevVSense uint32
-var prevTSense uint32
-
 func readAdcValues() (vSense uint32, tSense uint32) {
-
-	for _ = range 128 {
-		vSense = readAdcChannel(8)
-		if prevVSense != 0 {
-			vSense = (vSense + prevVSense*127) / 128
-		}
-		prevVSense = vSense
-	}
-
+	vSense = readAdcChannel(8)
 	tSense = readAdcChannel(9)
 	println("ADC read VSense:", vSense, "TSense:", tSense)
 	return vSense / 16, tSense
