@@ -33,8 +33,13 @@ func initPwm() {
 	py32.EXTI.SetIMR_IM10(1)  // Unmask interrupt for line 10 (PA10)
 
 	// timer setup
-	py32.RCC.SetAPBENR1_TIM3EN(1) // Enable TIM3 clock
-	py32.RCC.SetAPBENR2_TIM1EN(1) // Enable TIM1 clock
+	py32.RCC.SetAPBRSTR1_TIM3RST(1) // Reset TIM3
+	py32.RCC.SetAPBENR1_TIM3EN(1)   // Enable TIM3 clock
+	py32.RCC.SetAPBRSTR1_TIM3RST(0) // Release TIM3 from reset
+
+	py32.RCC.SetAPBRSTR2_TIM1RST(1) // Reset TIM1
+	py32.RCC.SetAPBENR2_TIM1EN(1)   // Enable TIM1 clock
+	py32.RCC.SetAPBRSTR2_TIM1RST(0) // Release TIM1 from reset
 
 	tMeasure.SetPSC(23)     // 24MHz / (23+1) = 1MHz timer clock
 	tMeasure.SetCR1_OPM(1)  // One pulse mode

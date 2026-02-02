@@ -22,9 +22,17 @@ func initAdc() {
 	pinVSense.Configure(machine.PinConfig{Mode: machine.PinInputAnalog})
 	pinTSense.Configure(machine.PinConfig{Mode: machine.PinInputAnalog})
 
-	py32.RCC.SetAPBENR2_ADCEN(1)    // Enable ADC clock
-	py32.RCC.SetAPBENR2_SYSCFGEN(1) // Enable SYSCFG clock - needed for DMA mapping
-	py32.RCC.SetAHBENR_DMAEN(1)     // Enable DMA clock
+	py32.RCC.SetAPBRSTR2_SYSCFGRST(1) // Reset SYSCFG
+	py32.RCC.SetAPBENR2_SYSCFGEN(1)   // Enable SYSCFG clock - needed for DMA mapping
+	py32.RCC.SetAPBRSTR2_SYSCFGRST(0) // Release SYSCFG from reset
+
+	py32.RCC.SetAPBRSTR2_ADCRST(1) // Reset ADC
+	py32.RCC.SetAPBENR2_ADCEN(1)   // Enable ADC clock
+	py32.RCC.SetAPBRSTR2_ADCRST(0) // Release ADC from reset
+
+	py32.RCC.SetAHBRSTR_DMARST(1) // Reset DMA
+	py32.RCC.SetAHBENR_DMAEN(1)   // Enable DMA clock
+	py32.RCC.SetAHBRSTR_DMARST(0) // Release DMA from reset
 
 	dma := &py32.DMA.CH[0]
 	dma.SetPAR(uint32(uintptr(unsafe.Pointer(&py32.ADC.DR.Reg))))
@@ -58,5 +66,6 @@ func readAdcValues() (vSense uint32, tSense uint32) {
 	}
 
 	cnt := uint32(len(adcBuffer))
-	return vSense / cnt / 8, tSense / cnt
+	println("ADC values:", vSense/cnt, tSense/cnt)
+	return 100 * vSense / cnt / 628, tSense / cnt
 }

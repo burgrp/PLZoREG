@@ -11,7 +11,9 @@ import (
 func configurePeripherals(digits, intensity int) {
 	configureGpio()
 
-	py32.RCC.SetAPBENR2_LEDEN(1)
+	py32.RCC.SetAPBRSTR2_LEDRST(1) // Reset LED
+	py32.RCC.SetAPBENR2_LEDEN(1)   // Enable LED clock
+	py32.RCC.SetAPBRSTR2_LEDRST(0) // Release LED from reset
 
 	py32.LED.SetPR(100)
 	SetIntensity(intensity)
