@@ -57,7 +57,7 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageTSense,
+	Page:      PageVSense,
 	InSetting: false,
 	VSense:    0,
 	TSense:    0,
@@ -239,17 +239,17 @@ func loadSettings() {
 func main() {
 
 	loadSettings()
-	initDisplay()
+
 	initKeyboard()
 	initAdc()
 	initPwm()
 
-	updateDisplay()
+	initDisplay()
 
 	for {
-		// not to only sleep here, we refresh the display periodically just for a case it needs to blink
-		time.Sleep(500 * time.Millisecond)
-		State.DisplayBlink = !State.DisplayBlink
+		v, t := readAdcValues()
+		State.VSense = v
+		State.TSense = t
 
 		if !isSynchronized() {
 			State.Error = ErrorNoSync
@@ -258,10 +258,6 @@ func main() {
 				State.Error = ErrorNone
 			}
 		}
-
-		v, t := readAdcValues()
-		State.VSense = v
-		State.TSense = t
 
 		// if State.TSense > 90 {
 		// 	State.Error = ErrorOverTemp
@@ -293,7 +289,9 @@ func main() {
 		}
 
 		setPwm(State.Duty)
-
 		updateDisplay()
+
+		time.Sleep(500 * time.Millisecond)
+		State.DisplayBlink = !State.DisplayBlink
 	}
 }
