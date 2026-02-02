@@ -7,8 +7,10 @@ import (
 )
 
 const (
-	pinVSense = machine.PB0
-	pinTSense = machine.PB1
+	pinVSense     = machine.PB0
+	pinTSense     = machine.PB1
+	channelVSense = 8
+	channelTSense = 9
 )
 
 var adcBuffer [128]struct {
@@ -37,14 +39,14 @@ func initAdc() {
 	dma.SetCR_EN(1)    // enable DMA channel
 
 	py32.ADC.SetCFGR2_CKMODE(py32.ADC_CFGR2_CKMODE_HSI_Div64)
-	py32.ADC.SetSMPR_SMP(py32.ADC_SMPR_SMP_Cycles239_5) // Sampling time 239.5 ADC clock cycles
-	py32.ADC.SetCFGR1_CONT(1)                           // continuous conversion mode
-	py32.ADC.SetCFGR1_OVRMOD(1)                         // overwrite mode
-	py32.ADC.SetCFGR1_DMAEN(1)                          // enable DMA
-	py32.ADC.SetCFGR1_DMACFG(1)                         // DMA in circular mode
-	py32.ADC.CHSELR.Set((1 << 8) | (1 << 9))            // select channels 8 and 9
-	py32.ADC.SetCR_ADEN(1)                              // enable ADC
-	py32.ADC.SetCR_ADSTART(1)                           // start ADC
+	py32.ADC.SetSMPR_SMP(py32.ADC_SMPR_SMP_Cycles239_5)              // Sampling time 239.5 ADC clock cycles
+	py32.ADC.SetCFGR1_CONT(1)                                        // continuous conversion mode
+	py32.ADC.SetCFGR1_OVRMOD(1)                                      // overwrite mode
+	py32.ADC.SetCFGR1_DMAEN(1)                                       // enable DMA
+	py32.ADC.SetCFGR1_DMACFG(1)                                      // DMA in circular mode
+	py32.ADC.CHSELR.Set((1 << channelVSense) | (1 << channelTSense)) // select channels 8 and 9
+	py32.ADC.SetCR_ADEN(1)                                           // enable ADC
+	py32.ADC.SetCR_ADSTART(1)                                        // start ADC
 
 }
 
