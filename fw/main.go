@@ -49,7 +49,7 @@ type SystemState struct {
 	Page         Page
 	VSense       uint32
 	VTarget      uint32
-	TSense       uint32
+	TSense       int32
 	InSetting    bool
 	DisplayBlink bool
 	Error        ErrorCode
@@ -57,7 +57,7 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageVSense,
+	Page:      PageTSense,
 	InSetting: false,
 	VSense:    0,
 	TSense:    0,
@@ -96,8 +96,13 @@ func updateDisplay() {
 		}
 		display.NumberAt(State.VTarget, false, dp, 2, 3)
 	case PageTSense:
-		display.NumberAt(State.TSense, false, -1, 1, 2)
-		display.GlyphAt(0x63, 2)
+		if (State.TSense) < 0 {
+			display.GlyphAt(0x40, 0) // minus sign
+			display.NumberAt(uint32(-State.TSense), true, -1, 2, 2)
+		} else {
+			display.NumberAt(uint32(State.TSense), false, -1, 1, 2)
+			display.GlyphAt(0x63, 2)
+		}
 	case PageDuty:
 		dp := -1
 		if !State.InSetting || State.DisplayBlink {
@@ -251,13 +256,13 @@ func main() {
 		State.VSense = v
 		State.TSense = t
 
-		if !isSynchronized() {
-			State.Error = ErrorNoSync
-		} else {
-			if State.Error == ErrorNoSync {
-				State.Error = ErrorNone
-			}
-		}
+		// if !isSynchronized() {
+		// 	State.Error = ErrorNoSync
+		// } else {
+		// 	if State.Error == ErrorNoSync {
+		// 		State.Error = ErrorNone
+		// 	}
+		// }
 
 		// if State.TSense > 90 {
 		// 	State.Error = ErrorOverTemp
