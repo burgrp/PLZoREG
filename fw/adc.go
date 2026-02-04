@@ -12,11 +12,13 @@ const (
 	pinTSense     = machine.PB1
 	channelVSense = 8
 	channelTSense = 9
+	channelTMCU   = 11
 )
 
-var adcBuffer [128]struct {
+var adcBuffer [64]struct {
 	vSense uint16
 	tSense uint16
+	tMcu   uint16
 }
 
 func initAdc() {
@@ -38,7 +40,7 @@ func initAdc() {
 	dma := &py32.DMA.CH[0]
 	dma.SetPAR(uint32(uintptr(unsafe.Pointer(&py32.ADC.DR.Reg))))
 	dma.SetMAR(uint32(uintptr(unsafe.Pointer(&adcBuffer[0]))))
-	dma.SetNDTR_NDT(uint32(len(adcBuffer) * 2)) // two words per entry
+	dma.SetNDTR_NDT(uint32(len(adcBuffer) * 3)) // three words per entry
 	dma.SetCR_DIR(0)                            // 0: peripheral to memory
 	dma.SetCR_PSIZE(1)                          // 01: 16-bit
 	dma.SetCR_MSIZE(1)                          // 01: 16-bit
@@ -48,14 +50,16 @@ func initAdc() {
 	dma.SetCR_EN(1)                             // enable DMA channel
 
 	py32.ADC.SetCFGR2_CKMODE(py32.ADC_CFGR2_CKMODE_HSI_Div64)
-	py32.ADC.SetSMPR_SMP(py32.ADC_SMPR_SMP_Cycles239_5)              // Sampling time 239.5 ADC clock cycles
-	py32.ADC.SetCFGR1_CONT(1)                                        // continuous conversion mode
-	py32.ADC.SetCFGR1_OVRMOD(1)                                      // overwrite mode
-	py32.ADC.SetCFGR1_DMAEN(1)                                       // enable DMA
-	py32.ADC.SetCFGR1_DMACFG(1)                                      // DMA in circular mode
-	py32.ADC.CHSELR.Set((1 << channelVSense) | (1 << channelTSense)) // select channels 8 and 9
-	py32.ADC.SetCR_ADEN(1)                                           // enable ADC
-	py32.ADC.SetCR_ADSTART(1)                                        // start ADC
+	py32.ADC.SetSMPR_SMP(py32.ADC_SMPR_SMP_Cycles239_5)                                   // Sampling time 239.5 ADC clock cycles
+	py32.ADC.SetCFGR1_CONT(1)                                                             // continuous conversion mode
+	py32.ADC.SetCFGR1_OVRMOD(1)                                                           // overwrite mode
+	py32.ADC.SetCFGR1_DMAEN(1)                                                            // enable DMA
+	py32.ADC.SetCFGR1_DMACFG(1)                                                           // DMA in circular mode
+	py32.ADC.CHSELR.Set((1 << channelVSense) | (1 << channelTSense) | (1 << channelTMCU)) // select channels 8, 9 and 11
+	py32.ADC.SetCCR_TSEN(1)
+	py32.ADC.SetCCR_VREFEN(1)
+	py32.ADC.SetCR_ADEN(1)    // enable ADC
+	py32.ADC.SetCR_ADSTART(1) // start ADC
 
 }
 
@@ -83,19 +87,25 @@ var vSenseLut = [...]util.LutPoint[uint16, uint16]{
 	{918, 250},
 }
 
-func readAdcValues() (vSense uint32, tSense int32) {
+var TSCAL1 = (*int32)(unsafe.Pointer(uintptr(0x1FFF0F14)))
+var TSCAL2 = (*int32)(unsafe.Pointer(uintptr(0x1FFF0F18)))
+
+func readAdcValues() (vSense uint32, tSense, tMcu int32) {
 
 	for _, e := range adcBuffer {
 		vSense += uint32(e.vSense)
 		tSense += int32(e.tSense)
+		tMcu += int32(e.tMcu)
 	}
 	vSense /= uint32(len(adcBuffer))
 	tSense /= int32(len(adcBuffer))
+	tMcu /= int32(len(adcBuffer))
 
-	vSense = uint32(util.Interpolate(uint16(vSense), vSenseLut[:]))
+	tMcu = 30 + (tMcu-*TSCAL1)*(85-30)/(*TSCAL2-*TSCAL1)
 	tSense = int32(util.Interpolate(uint16(tSense), util.Divider_47k_ntc3950[:]) / 10)
 
+	vSense = uint32(util.Interpolate(uint16(vSense), vSenseLut[:]))
 	vSense = uint32(util.Compensate(100, 75, 250, 193, tSense, int32(vSense)))
 
-	return vSense, tSense
+	return vSense, tSense, tMcu
 }

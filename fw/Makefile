@@ -12,6 +12,7 @@ build:
 	tinygo build --size html --serial rtt --scheduler tasks --gc leaking --target ${TARGET_TINYGO} -o ${IMAGE} .
 
 flash: build
+	pkill pyocd || true
 	pyocd load -t ${TARGET_PYOCD} ${IMAGE}
 
 gdb:

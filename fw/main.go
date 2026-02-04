@@ -20,6 +20,7 @@ const (
 	PageVSense Page = iota
 	PageVTarget
 	PageTSense
+	PageTMCU
 	PageDuty
 	PageCount
 )
@@ -50,6 +51,7 @@ type SystemState struct {
 	VSense       uint32
 	VTarget      uint32
 	TSense       int32
+	TMCU         int32
 	InSetting    bool
 	DisplayBlink bool
 	Error        ErrorCode
@@ -57,7 +59,7 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageVSense,
+	Page:      PageTMCU,
 	InSetting: false,
 	VSense:    0,
 	TSense:    0,
@@ -103,6 +105,9 @@ func updateDisplay() {
 			display.NumberAt(uint32(State.TSense), false, -1, 1, 2)
 			display.GlyphAt(0x63, 2)
 		}
+	case PageTMCU:
+		display.NumberAt(uint32(State.TMCU), false, -1, 1, 2)
+		display.GlyphAt(0xE3, 2)
 	case PageDuty:
 		dp := -1
 		if !State.InSetting || State.DisplayBlink {
@@ -252,9 +257,10 @@ func main() {
 	initDisplay()
 
 	for {
-		v, t := readAdcValues()
+		v, t, c := readAdcValues()
 		State.VSense = v
 		State.TSense = t
+		State.TMCU = c
 
 		// if !isSynchronized() {
 		// 	State.Error = ErrorNoSync
