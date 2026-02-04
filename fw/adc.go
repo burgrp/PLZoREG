@@ -3,6 +3,7 @@ package main
 import (
 	"device/py32"
 	"machine"
+	"plzoreg/util"
 	"unsafe"
 )
 
@@ -58,6 +59,30 @@ func initAdc() {
 
 }
 
+var vSenseLut = [...]util.LutPoint[uint16, uint16]{
+	{3859, 50},
+	{3771, 60},
+	{3671, 70},
+	{3562, 80},
+	{3445, 90},
+	{3319, 100},
+	{3184, 110},
+	{3041, 120},
+	{2895, 130},
+	{2757, 140},
+	{2602, 150},
+	{2440, 160},
+	{2272, 170},
+	{2099, 180},
+	{1937, 190},
+	{1768, 200},
+	{1597, 210},
+	{1420, 220},
+	{1260, 230},
+	{1098, 240},
+	{918, 250},
+}
+
 func readAdcValues() (vSense uint32, tSense int32) {
 
 	for _, e := range adcBuffer {
@@ -67,7 +92,10 @@ func readAdcValues() (vSense uint32, tSense int32) {
 	vSense /= uint32(len(adcBuffer))
 	tSense /= int32(len(adcBuffer))
 
-	tSense = NTC3950TempC10(uint32(tSense)) / 10
+	vSense = uint32(util.Interpolate(uint16(vSense), vSenseLut[:]))
+	tSense = int32(util.Interpolate(uint16(tSense), util.Divider_47k_ntc3950[:]) / 10)
 
-	return 50 * vSense / 628, tSense
+	vSense = uint32(util.Compensate(100, 75, 250, 193, tSense, int32(vSense)))
+
+	return vSense, tSense
 }

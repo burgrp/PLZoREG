@@ -57,7 +57,7 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageTSense,
+	Page:      PageVSense,
 	InSetting: false,
 	VSense:    0,
 	TSense:    0,
@@ -272,20 +272,33 @@ func main() {
 
 			if !(State.Page == PageDuty && State.InSetting) {
 
-				d := State.Duty
+				duty := State.Duty
 
-				if State.VSense < State.VTarget {
-					if d > 0 {
-						d--
+				diff := int32(State.VTarget) - int32(State.VSense)
+
+				if diff != 0 {
+					steps := diff / 10
+					stepsAbs := steps
+					if stepsAbs < 0 {
+						stepsAbs = -stepsAbs
 					}
-
-				} else {
-					if d < 100 {
-						d++
+					if stepsAbs == 0 {
+						stepsAbs = 1
 					}
 				}
 
-				State.Duty = d
+				// if State.VSense < State.VTarget {
+				// 	if duty > 0 {
+				// 		duty--
+				// 	}
+
+				// } else {
+				// 	if duty < 100 {
+				// 		duty++
+				// 	}
+				// }
+
+				State.Duty = duty
 
 			}
 

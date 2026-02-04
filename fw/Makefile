@@ -25,3 +25,6 @@ install-pack:
 
 disassembly: build
 	arm-none-eabi-objdump -dS ${IMAGE} > disassembly.txt
+
+test:
+	tinygo test -v .
