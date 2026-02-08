@@ -19,10 +19,11 @@ const (
 const (
 	PageVSense Page = iota
 	PageVTarget
+	PageDuty
 	PageTSense
 	PageTMCU
-	PageDuty
 	PageCount
+	PageDefault = PageVSense
 )
 
 const FlashKeyV1 = 0xDEADBEEF
@@ -262,17 +263,17 @@ func main() {
 		State.TSense = t
 		State.TMCU = c
 
-		// if !isSynchronized() {
-		// 	State.Error = ErrorNoSync
-		// } else {
-		// 	if State.Error == ErrorNoSync {
-		// 		State.Error = ErrorNone
-		// 	}
-		// }
+		if !isSynchronized() {
+			State.Error = ErrorNoSync
+		} else {
+			if State.Error == ErrorNoSync {
+				State.Error = ErrorNone
+			}
+		}
 
-		// if State.TSense > 90 {
-		// 	State.Error = ErrorOverTemp
-		// }
+		if State.TSense > 90 {
+			State.Error = ErrorOverTemp
+		}
 
 		if State.Error == ErrorNone {
 
@@ -293,16 +294,16 @@ func main() {
 					}
 				}
 
-				// if State.VSense < State.VTarget {
-				// 	if duty > 0 {
-				// 		duty--
-				// 	}
+				if State.VSense < State.VTarget {
+					if duty > 0 {
+						duty--
+					}
 
-				// } else {
-				// 	if duty < 100 {
-				// 		duty++
-				// 	}
-				// }
+				} else {
+					if duty < 100 {
+						duty++
+					}
+				}
 
 				State.Duty = duty
 
