@@ -60,7 +60,7 @@ type SystemState struct {
 }
 
 var State = SystemState{
-	Page:      PageTMCU,
+	Page:      PageDefault,
 	InSetting: false,
 	VSense:    0,
 	TSense:    0,
