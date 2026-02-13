@@ -10,7 +10,7 @@ The project combines:
 - **Firmware** (TinyGo-based embedded code in `fw/`)
 - **Hardware** (KiCad PCB design files in `board/`)
 
-**Current Development Stage**: The firmware is in early development. The current implementation provides basic UI components (7-segment display, button input handling) that will be used for the power regulation control interface. The counter demo demonstrates the display and input system that will eventually show power levels and allow user control.
+**Current Status**: The firmware implements a complete power regulation system with voltage monitoring, adaptive PWM control, temperature sensing, and a multi-page user interface for monitoring and configuration.
 
 ## Build System
 
@@ -49,15 +49,28 @@ The firmware is built with TinyGo using these compiler flags:
 - `--gc leaking`: No garbage collection (embedded context)
 - `--serial rtt`: RTT for debug output
 
-**Module Name**: `template` (as defined in `go.mod`)
+**Module Name**: `plzoreg` (as defined in `go.mod`)
 
 #### Core Components
 
-1. **`main.go`**: Application entry point
-   - Initializes display with 3 digits at brightness 200
-   - Creates keyboard with two buttons (PA11=increment, PA12=decrement)
-   - Main loop: displays counter, handles button events
-   - Holds both buttons for 3+ seconds to reset counter to 100
+1. **`main.go`**: Application entry point and control logic
+   - **System State Management**: Maintains voltage, temperature, duty cycle, and UI state
+   - **Control Loop (500ms)**: Reads ADC values, implements regulation algorithm, updates PWM and display
+   - **Regulation Algorithm**: Compares VSense with VTarget and adjusts duty cycle (±1% per cycle) to maintain voltage
+   - **User Interface**: Multi-page display system with 5 information pages:
+     - Page 1: Voltage Sense (no decimal point, e.g., `220`)
+     - Page 2: Voltage Target (trailing decimal, e.g., `220.`) - adjustable
+     - Page 3: Duty Cycle (decimal format, e.g., `0.75` = 75%)
+     - Page 4: Triac heatsink temperature (° symbol, e.g., `50°`)
+     - Page 5: MCU temperature (.° symbols, e.g., `50.°`)
+   - **Settings Persistence**: Saves/loads VTarget from flash memory
+   - **Safety Features**: Error detection for no sync (E01) and overtemperature >90°C (E02)
+
+   **UI Navigation**:
+   - Two buttons: Up (PA11) and Down (PA12)
+   - Single press: cycle through pages
+   - Hold both buttons 1s: enter/exit setting mode on VTarget and Duty pages
+   - In setting mode: Up/Down buttons adjust values (VTarget: ±1V, Duty: ±5%)
 
 2. **`display/` package**: 7-segment LED display driver
    - `generic.go`: Platform-independent display API
@@ -76,7 +89,16 @@ The firmware is built with TinyGo using these compiler flags:
    - Generates three event types: `KeyDown`, `KeyPress` (initial + repeat), `KeyUp`
    - Key repeat: sends additional `KeyPress` events if held >500ms
    - Runs in goroutine, sends events via channel
-   - Each key has an ID field used to identify increment vs decrement
+   - Each key has an ID field (KeyUp=1, KeyDown=-1) used for navigation and value adjustment
+
+4. **`flash/` package**: Flash memory operations
+   - Provides page erase and program functions for persistent settings storage
+   - VTarget value stored in last page of main flash with version key (FlashKeyV1)
+
+5. **Hardware peripheral packages**:
+   - `adc.go`: ADC configuration for voltage and temperature sensing
+   - `pwm.go`: Timer-based PWM for phase-angle power control
+   - `zcd.go`: Zero-cross detection using EXTI for AC synchronization
 
 #### Build Tags
 The display driver uses Go build tags for hardware abstraction:
