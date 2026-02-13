@@ -13,10 +13,11 @@ const (
 )
 
 var (
-	tMeasure = py32.TIM3
-	tPwm     = py32.TIM1
-	zcdWidth uint32
-	period   uint32
+	tMeasure  = py32.TIM3
+	tPwm      = py32.TIM1
+	zcdWidth  uint32
+	period    uint32
+	zcdActive bool
 )
 
 func initPwm() {
@@ -81,29 +82,35 @@ func EXTI4_15_IRQHandler(i interrupt.Interrupt) {
 
 	if py32.EXTI.GetPR_PR10() == 1 {
 
-		py32.EXTI.SetPR_PR10(1) // Clear pending bit for line 10 (PA10)
+		zcd := pinZCD.Get()
+		if zcd != zcdActive {
 
-		if pinZCD.Get() {
+			zcdActive = zcd
 
-			// rising edge
+			if zcdActive {
 
-			if tMeasure.GetCR1_CEN() == 1 {
-				period = tMeasure.GetCNT()
+				// rising edge
+
+				if tMeasure.GetCR1_CEN() == 1 {
+					period = tMeasure.GetCNT()
+				}
+
+				tMeasure.SetEGR_UG(1)  // Update generation - reset timer
+				tMeasure.SetCR1_CEN(1) // Start timer
+
+				tPwm.SetEGR_UG(1)  // Update generation - reset timer
+				tPwm.SetCR1_CEN(1) // Start timer
+
+			} else {
+
+				// falling edge
+
+				zcdWidth = tMeasure.GetCNT()
+
 			}
-
-			tMeasure.SetEGR_UG(1)  // Update generation - reset timer
-			tMeasure.SetCR1_CEN(1) // Start timer
-
-			tPwm.SetEGR_UG(1)  // Update generation - reset timer
-			tPwm.SetCR1_CEN(1) // Start timer
-
-		} else {
-
-			// falling edge
-
-			zcdWidth = tMeasure.GetCNT()
 
 		}
 
+		py32.EXTI.SetPR_PR10(1) // Clear pending bit for line 10 (PA10)
 	}
 }
