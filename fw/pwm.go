@@ -71,6 +71,9 @@ func setPwm(duty uint32) {
 		}
 		tPwm.SetCCR1(start)
 		tPwm.SetARR(start + triggerWidth)
+	} else {
+		tPwm.SetCCR1(0xFFFF)
+		tPwm.SetARR(0xFFFF)
 	}
 }
 
