@@ -76,7 +76,7 @@ Zobrazuje teplotu spínacího prvku (informační hodnota):
 ### 5. Teplota MCU
 **Displej**: `.°` teplota následovaná desetinnou tečkou a symbolem ° (např. `50.°`)
 
-Zobrazuje vnitřní teplotu zařízení(informační hodnota):
+Zobrazuje vnitřní teplotu zařízení (informační hodnota):
 - **Normální**: 20-60°C
 - **Pouze informativní** - není vyžadována akce
 
@@ -98,14 +98,14 @@ Pokud dojde k chybě, displej zobrazí `E` následované číslem:
 **Význam**: Teplota triaku překročila 90°C
 
 **Možné příčiny**:
-- Porucha termostatu ohřívače
-- Nedostatečný průtok/cirkulace vody
-- Provoz nasucho (žádná voda v ohřívači)
+- Nedostatečné chlazení/větrání
+- Nadměrný proud zátěže
+- Hardwarová závada
 
 **Řešení**:
 1. Okamžitě odpojte napájení
-2. Zkontrolujte hladinu vody a cirkulaci v ohřívači
-3. Ověřte funkci termostatu ohřívače
+2. Zkontrolujte větrání a chlazení zařízení
+3. Ověřte, že proud zátěže je v rámci specifikací
 4. Před restartováním nechte systém vychladnout
 
 **Bezpečnostní upozornění**: Když je aktivní jakákoli chyba, výstup výkonu je automaticky vypnutý.
@@ -156,7 +156,7 @@ Pokud dojde k chybě, displej zobrazí `E` následované číslem:
 |---------|---------------|--------|
 | Displej nesvítí | Chybí napájení | Zkontrolujte vstupní napájení |
 | Trvalá chyba E01 | Chybí AC vstup | Ověřte, že střídač je aktivní |
-| Častá chyba E02 | Problém s ohřívačem | Zkontrolujte termostat/hladinu vody ohřívače |
+| Častá chyba E02 | Přehřátí | Zkontrolujte větrání a chlazení |
 | Střídač stále hlučí | Cílové napětí příliš nízké | Zvyšte nastavení cílového napětí |
 | Nízké využití energie | Cílové napětí příliš vysoké | Snižte nastavení cílového napětí |
 | Displej zobrazuje špatné hodnoty | Vyžaduje kalibraci | Kontaktujte podporu |
