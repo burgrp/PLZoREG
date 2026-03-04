@@ -4673,7 +4673,7 @@
 		(uuid "54d4e111-b8aa-4e73-8b35-c04726f48e5a")
 	)
 	(junction
-		(at 105.41 166.37)
+		(at 105.41 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56d1ef28-7e53-46a1-b297-213b4deabeea")
@@ -4707,6 +4707,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "698bbc74-6f30-4718-9b02-897fde9b17ac")
+	)
+	(junction
+		(at 62.23 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "95f29af2-05d1-4708-ab2f-909b0ed86a0a")
 	)
 	(junction
 		(at 163.83 55.88)
@@ -4773,12 +4779,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e996b649-f7e8-4004-914c-826c664bf1f2")
-	)
-	(junction
-		(at 62.23 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eadf1fff-0dd6-4077-86dc-4459f417ff4e")
 	)
 	(junction
 		(at 111.76 39.37)
@@ -4914,7 +4914,17 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 166.37) (xy 105.41 166.37)
+			(xy 74.93 158.75) (xy 77.47 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1aab8e73-f198-46ac-8db4-9e6a9593cb8d")
+	)
+	(wire
+		(pts
+			(xy 116.84 160.02) (xy 105.41 160.02)
 		)
 		(stroke
 			(width 0)
@@ -4931,6 +4941,16 @@
 			(type default)
 		)
 		(uuid "1e0f30f8-0d7d-404f-9403-e6ba5b220f83")
+	)
+	(wire
+		(pts
+			(xy 77.47 158.75) (xy 77.47 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ee248b5-f598-4d57-8e9b-797787817385")
 	)
 	(wire
 		(pts
@@ -5044,7 +5064,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 166.37) (xy 101.6 166.37)
+			(xy 105.41 160.02) (xy 101.6 160.02)
 		)
 		(stroke
 			(width 0)
@@ -5064,17 +5084,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 147.32) (xy 62.23 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c57938e-87c5-438e-8cb8-71ba180d0753")
-	)
-	(wire
-		(pts
-			(xy 68.58 166.37) (xy 66.04 166.37)
+			(xy 66.04 166.37) (xy 77.47 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5241,6 +5251,16 @@
 			(type default)
 		)
 		(uuid "6bfab2bb-09cb-46de-90cb-2bfb20be0ff2")
+	)
+	(wire
+		(pts
+			(xy 62.23 158.75) (xy 62.23 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d726ff2-5baa-4629-9bde-6c8df6ac81c2")
 	)
 	(polyline
 		(pts
@@ -5454,13 +5474,13 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 171.45) (xy 62.23 171.45)
+			(xy 77.47 165.1) (xy 77.47 166.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4f99440-237e-43d6-892e-30a19e10a113")
+		(uuid "bf1f12b9-cb52-4e55-be80-a077dc57d839")
 	)
 	(wire
 		(pts
@@ -5564,7 +5584,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 166.37) (xy 92.71 166.37)
+			(xy 93.98 160.02) (xy 92.71 160.02)
 		)
 		(stroke
 			(width 0)
@@ -5581,6 +5601,26 @@
 			(type default)
 		)
 		(uuid "e24ddcf7-5230-44b3-be00-0a85c56d07b7")
+	)
+	(wire
+		(pts
+			(xy 62.23 147.32) (xy 62.23 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e72c1120-68dc-46ea-9ec4-210597de8de5")
+	)
+	(wire
+		(pts
+			(xy 62.23 158.75) (xy 67.31 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e75fff7b-e707-445f-8358-9805aabc3754")
 	)
 	(wire
 		(pts
@@ -5601,16 +5641,6 @@
 			(type default)
 		)
 		(uuid "ee5e4e9a-3bb6-44d4-899a-db8f96a217ea")
-	)
-	(wire
-		(pts
-			(xy 76.2 166.37) (xy 77.47 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef96681a-ee18-49d6-ae06-16e970458d07")
 	)
 	(wire
 		(pts
@@ -5713,7 +5743,7 @@
 		(uuid "0f44b314-1982-4b89-9ff0-d9f530d9e3b9")
 	)
 	(label "TRIAC"
-		(at 116.84 166.37 0)
+		(at 116.84 160.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9247,7 +9277,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 171.45 0)
+		(at 92.71 165.1 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9257,7 +9287,7 @@
 		(fields_autoplaced yes)
 		(uuid "62b01852-81ce-44f3-ae6a-42bb97dcc3a2")
 		(property "Reference" "#PWR03"
-			(at 92.71 177.8 0)
+			(at 92.71 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9266,7 +9296,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 176.53 0)
+			(at 92.71 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9274,7 +9304,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 171.45 0)
+			(at 92.71 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9283,7 +9313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 171.45 0)
+			(at 92.71 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9292,7 +9322,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 171.45 0)
+			(at 92.71 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10489,7 +10519,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 97.79 166.37 270)
+		(at 97.79 160.02 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10499,7 +10529,7 @@
 		(fields_autoplaced yes)
 		(uuid "b3600389-a8e5-4d07-9151-5d7207914866")
 		(property "Reference" "R7"
-			(at 97.79 160.02 90)
+			(at 97.79 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10507,7 +10537,7 @@
 			)
 		)
 		(property "Value" "270R"
-			(at 97.79 162.56 90)
+			(at 97.79 156.21 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10515,7 +10545,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 97.79 168.148 90)
+			(at 97.79 161.798 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10524,7 +10554,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.79 166.37 0)
+			(at 97.79 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10533,7 +10563,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 97.79 166.37 0)
+			(at 97.79 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10626,7 +10656,7 @@
 	)
 	(symbol
 		(lib_id "Relay_SolidState:MOC3023M")
-		(at 85.09 168.91 0)
+		(at 85.09 162.56 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10636,7 +10666,7 @@
 		(fields_autoplaced yes)
 		(uuid "b96cd606-ea59-4750-a56b-659aa2a56579")
 		(property "Reference" "U4"
-			(at 85.09 160.02 0)
+			(at 85.09 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10644,7 +10674,7 @@
 			)
 		)
 		(property "Value" "MOC3023M"
-			(at 85.09 162.56 0)
+			(at 85.09 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10652,7 +10682,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-6_W8.89mm_SMDSocket_LongPads"
-			(at 90.17 173.99 0)
+			(at 90.17 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10663,7 +10693,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF"
-			(at 85.09 168.91 0)
+			(at 85.09 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10673,7 +10703,7 @@
 			)
 		)
 		(property "Description" "Random Phase Opto-Triac, Vdrm 400V, Ift 5mA, DIP6"
-			(at 85.09 168.91 0)
+			(at 85.09 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10710,17 +10740,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 72.39 166.37 270)
+		(at 71.12 158.75 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b99cbab8-dbf1-4b03-a100-3f00dbaa0f5a")
 		(property "Reference" "R6"
-			(at 72.39 160.02 90)
+			(at 71.12 161.544 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10728,7 +10757,7 @@
 			)
 		)
 		(property "Value" "270R"
-			(at 72.39 162.56 90)
+			(at 71.12 164.084 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10736,7 +10765,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 72.39 168.148 90)
+			(at 71.12 160.528 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10745,7 +10774,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 72.39 166.37 0)
+			(at 71.12 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10754,7 +10783,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 72.39 166.37 0)
+			(at 71.12 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11511,7 +11540,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 105.41 166.37 0)
+		(at 105.41 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -11519,7 +11548,7 @@
 		(dnp no)
 		(uuid "e144bc98-d4c3-4400-9fdc-b7c55b18b8bb")
 		(property "Reference" "TP1"
-			(at 106.934 161.798 0)
+			(at 106.934 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11528,7 +11557,7 @@
 			)
 		)
 		(property "Value" "TRIAC"
-			(at 106.934 163.83 0)
+			(at 106.934 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11537,7 +11566,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-			(at 110.49 166.37 0)
+			(at 110.49 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11546,7 +11575,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 110.49 166.37 0)
+			(at 110.49 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11555,7 +11584,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 105.41 166.37 0)
+			(at 105.41 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
