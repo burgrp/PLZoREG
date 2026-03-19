@@ -6,6 +6,8 @@ PLZoREG is a power regulator designed to sit between a photovoltaic (PV) inverte
 
 ![PLZoREG](expl.png)
 
+Designed in [Onshape](https://cad.onshape.com/documents/f103c5e3fbe2c6c85b2f1c34/w/b57b1089b11cbe9058b16474/e/0dcdb83c0b13157c67edb204?explodedView=Mp3pZAKuXcCp%2B0x2f&renderMode=0&rightPanel=explodedViewPanel&uiState=69bc7ba3b56ad930e86b1156).
+
 ## Problem Statement
 
 Low-cost PV inverters often struggle to maintain stable output when the load (DHW heater) exceeds the available solar power on cloudy days. The inverter attempts to deliver maximum power but fails to maintain output voltage, causing the load to cycle on and off rapidly. This creates:
