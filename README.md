@@ -33,6 +33,8 @@ PLZoREG monitors the inverter's output voltage and dynamically adjusts power del
 
 The hardware design is located in `board/` (KiCad 8 project).
 
+![PCB](pcb.png)
+
 **Microcontroller**: PY32F030x8 (ARM Cortex-M0+)
 
 **Key Components**:
