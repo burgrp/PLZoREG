@@ -1,6 +1,10 @@
 # PLZoREG - PV Power Regulator
 
+![PLZoREG](sketch.png)
+
 PLZoREG is a power regulator designed to sit between a photovoltaic (PV) inverter and a domestic hot water (DHW) heater. It solves the problem of cheap grid-tie inverters oscillating under varying loads during cloudy conditions, which causes audible noise from the heating elements.
+
+![PLZoREG](expl.png)
 
 ## Problem Statement
 
